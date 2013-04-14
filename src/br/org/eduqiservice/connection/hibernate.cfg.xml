@@ -17,6 +17,7 @@
    <mapping class="br.org.eduqiservice.model.ResultadoAluno"/>
    <mapping class="br.org.eduqiservice.model.ResultadoEscola"/>
    <mapping class="br.org.eduqiservice.model.ResultadoMunicipio"/>
+   <mapping class="br.org.eduqiservice.model.DescricaoQuestionarioEscola"/>
    
   </session-factory>
 </hibernate-configuration>

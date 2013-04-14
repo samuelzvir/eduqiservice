@@ -17,7 +17,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>CacheSearchServlet</servlet-name>
-    <url-pattern>/CacheSearch</url-pattern>
+    <url-pattern>/cachesearch</url-pattern>
   </servlet-mapping>
   <listener>
     <listener-class>br.org.eduqiservice.listener.InitDataListener</listener-class>
