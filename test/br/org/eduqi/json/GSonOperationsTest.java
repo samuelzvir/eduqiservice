@@ -14,14 +14,9 @@ public class GSonOperationsTest {
 
 	@Test
 	public void testBuildGsonObject() {
-QuestEscolaDAOImpl dao = new QuestEscolaDAOImpl();
+		QuestEscolaDAOImpl dao = new QuestEscolaDAOImpl();
 		
 		List<QuestEscola> result = dao.listAll();
-		
-		System.out.println(result.size());
-		for (QuestEscola questEscola : result) {
-			System.out.println(GSonOperations.buildGsonObject(questEscola));
-		}
 		
 		
 	}

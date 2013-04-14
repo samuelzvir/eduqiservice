@@ -9,7 +9,7 @@ public class CacheSearchBusinessTest {
 	/**
 	 * teste com o intuito de testar o tempo de processamento.
 	 */
-	@Test(timeout=200000)
+	@Test(timeout=20000)
 	public void testBuildCacheSearchList() {
 		CacheSearchBusiness.buildCacheSearchList();
 	}
