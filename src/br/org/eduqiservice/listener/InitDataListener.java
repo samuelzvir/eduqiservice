@@ -6,6 +6,8 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import br.org.eduqiservice.control.CacheSearchController;
+import br.org.eduqiservice.domain.AnswerStats;
+import br.org.eduqiservice.thread.ProbThread;
 
 /**
  * Listener utilizado para iniciar o processamento dos dados.
@@ -26,6 +28,8 @@ public class InitDataListener implements ServletContextListener, HttpSessionList
     public void contextInitialized(ServletContextEvent arg0) {
         System.out.println("Carrega dados");
         CacheSearchController.initCacheSearchList();
+        Thread t = new Thread(new ProbThread());
+        t.start();        
     }
 
 	/**

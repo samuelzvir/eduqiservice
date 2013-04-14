@@ -1,5 +1,6 @@
 package br.org.eduqiservice.control;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -7,9 +8,11 @@ import com.google.gson.Gson;
 import br.org.eduqiservice.dao.DescricaoQuestionarioEscolaDAO;
 import br.org.eduqiservice.dao.DescricaoQuestionarioEscolaDAOImpl;
 import br.org.eduqiservice.dao.QuestEscolaDAOImpl;
+import br.org.eduqiservice.dao.ResultadoEscolaDAOImpl;
 import br.org.eduqiservice.domain.QuestStatistics;
 import br.org.eduqiservice.model.DescricaoQuestionarioEscola;
 import br.org.eduqiservice.model.QuestEscola;
+import br.org.eduqiservice.model.ResultadoEscola;
 import br.org.eduqiservice.util.QuestParser;
 
 public class InvestmentController {
@@ -89,6 +92,33 @@ public class InvestmentController {
 		
 		Gson gson = new Gson();
 		return gson.toJson(qe);
+		
+	}
+	
+	public static List<QuestEscola> buildProb(){
+		ResultadoEscolaDAOImpl escolaDAOImpl = new ResultadoEscolaDAOImpl();
+		List<ResultadoEscola> mt = escolaDAOImpl.getMilPrimeirosMat();
+		List<ResultadoEscola> lp = escolaDAOImpl.getMilPrimeirosLp();
+		List<Integer> idEscolas = new ArrayList<Integer>();
+		
+		for (ResultadoEscola resultadoEscola : lp) {
+			idEscolas.add(resultadoEscola.getIdEscola());
+		}
+		for (ResultadoEscola resultM : mt) {
+			idEscolas.add(resultM.getIdEscola());
+		}
+		
+		QuestEscolaDAOImpl escolaDAO = new  QuestEscolaDAOImpl();
+		List<QuestEscola> questEscola = new ArrayList<QuestEscola>();
+		
+		for (Integer id : idEscolas) {
+			questEscola.add(escolaDAO.findById(id));
+		}
+		
+		//utiliza dos valores coletados
+		return questEscola;
+		
+		
 		
 	}
 	

@@ -12,7 +12,7 @@ import br.org.eduqiservice.util.HibernateUtil;
 public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola> implements ResultadoEscolaDAO {
 
 	/**
-	 * Retorna as 1000 escolas com notas mais altas em MT
+	 * Retorna as 100 escolas com notas mais altas em MT
 	 * @return
 	 */
 	public List<ResultadoEscola> getMilPrimeirosMat(){
@@ -20,46 +20,46 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class)
-			    .addOrder(Property.forName("mediaMt").desc()).setMaxResults(1000).list();
+			    .addOrder(Property.forName("mediaMt").desc()).setMaxResults(100).list();
 		
 		return escolas;
 	}
 	
 	/**
-	 * Retorna as 1000 escolas com notas mais altas em LP
+	 * Retorna as 100 escolas com notas mais altas em LP
 	 * @return
 	 */
 	public List<ResultadoEscola> getMilPrimeirosLp(){
 		Session session = HibernateUtil.getInstance();
 	
 		@SuppressWarnings("unchecked")
-		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").desc()).setMaxResults(1000).list();
+		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").desc()).setMaxResults(100).list();
 		
 		return escolas;
 	}
 	
 	/**
-	 * Retorna as 1000 escolas com notas mais baixas em LP
+	 * Retorna as 100 escolas com notas mais baixas em LP
 	 * @return
 	 */
 	public List<ResultadoEscola> getMilUltimosMt(){
 		Session session = HibernateUtil.getInstance();
 	
 		@SuppressWarnings("unchecked")
-		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaMt").asc()).setMaxResults(1000).list();
+		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaMt").asc()).setMaxResults(100).list();
 		
 		return escolas;
 	}
 	
 	/**
-	 * Retorna as 1000 escolas com notas mais baixas em LP
+	 * Retorna as 100 escolas com notas mais baixas em LP
 	 * @return
 	 */
 	public List<ResultadoEscola> getMilUltimosLp(){
 		Session session = HibernateUtil.getInstance();
 	
 		@SuppressWarnings("unchecked")
-		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").asc()).setMaxResults(1000).list();
+		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").asc()).setMaxResults(100).list();
 		
 		return escolas;
 	}

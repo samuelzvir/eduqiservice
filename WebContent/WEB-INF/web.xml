@@ -32,4 +32,14 @@
     <servlet-name>QuestServlet</servlet-name>
     <url-pattern>/questservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProbServlet</display-name>
+    <servlet-name>ProbServlet</servlet-name>
+    <servlet-class>br.org.eduqiservice.servlets.ProbServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProbServlet</servlet-name>
+    <url-pattern>/ProbServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
