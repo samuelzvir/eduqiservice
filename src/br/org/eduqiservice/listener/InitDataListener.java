@@ -6,7 +6,6 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import br.org.eduqiservice.control.CacheSearchController;
-import br.org.eduqiservice.domain.AnswerStats;
 import br.org.eduqiservice.thread.ProbThread;
 
 /**

@@ -99,7 +99,10 @@ public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 
 	public T findById(Serializable id) {
 		session = HibernateUtil.getInstance();
-		return (T) this.session.get(this.persistentClass, id);
+		T r = (T) this.session.get(this.persistentClass, id);
+		session.close();
+		return r;
+		
 	}
 
 

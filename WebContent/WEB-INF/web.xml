@@ -42,4 +42,14 @@
     <servlet-name>ProbServlet</servlet-name>
     <url-pattern>/probservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CepProvider</display-name>
+    <servlet-name>CepProvider</servlet-name>
+    <servlet-class>br.org.eduqiservice.servlets.CepProvider</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CepProvider</servlet-name>
+    <url-pattern>/cepprovider</url-pattern>
+  </servlet-mapping>
 </web-app>

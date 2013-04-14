@@ -480,7 +480,7 @@ public class AnswerStats {
 		prob.setInexistente(calcProp(size, inexistente));
 		
 		if(descricaoQuestionarioEscola == null){
-			descricaoQuestionarioEscola = new HashMap<>();
+			descricaoQuestionarioEscola = new HashMap<Integer,DescricaoQuestionarioEscola>();
 			
 			DescricaoQuestionarioEscolaDAOImpl dao = new DescricaoQuestionarioEscolaDAOImpl();
 			

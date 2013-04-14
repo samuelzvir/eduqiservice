@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
-import br.org.eduqiservice.cache.CachedCollections;
 import br.org.eduqiservice.domain.AnswerStats;
 
 /**
