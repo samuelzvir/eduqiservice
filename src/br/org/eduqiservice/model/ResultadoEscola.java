@@ -164,4 +164,91 @@ public class ResultadoEscola implements Serializable {
 		this.taxaParticipacao = taxaParticipacao;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + idDependenciaAdm;
+		result = prime * result + idDivulgacao;
+		result = prime * result
+				+ ((idEscola == null) ? 0 : idEscola.hashCode());
+		result = prime * result + idLocalizacao;
+		result = prime * result
+				+ ((idMunicipio == null) ? 0 : idMunicipio.hashCode());
+		result = prime * result + idProvaBrasil;
+		result = prime * result + idSerie;
+		result = prime * result + idUf;
+		result = prime * result + ((mediaLp == null) ? 0 : mediaLp.hashCode());
+		result = prime * result + ((mediaMt == null) ? 0 : mediaMt.hashCode());
+		result = prime
+				* result
+				+ ((nuMatriculadosCenso == null) ? 0 : nuMatriculadosCenso
+						.hashCode());
+		result = prime * result
+				+ ((nuPresentes == null) ? 0 : nuPresentes.hashCode());
+		result = prime
+				* result
+				+ ((taxaParticipacao == null) ? 0 : taxaParticipacao.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ResultadoEscola other = (ResultadoEscola) obj;
+		if (idDependenciaAdm != other.idDependenciaAdm)
+			return false;
+		if (idDivulgacao != other.idDivulgacao)
+			return false;
+		if (idEscola == null) {
+			if (other.idEscola != null)
+				return false;
+		} else if (!idEscola.equals(other.idEscola))
+			return false;
+		if (idLocalizacao != other.idLocalizacao)
+			return false;
+		if (idMunicipio == null) {
+			if (other.idMunicipio != null)
+				return false;
+		} else if (!idMunicipio.equals(other.idMunicipio))
+			return false;
+		if (idProvaBrasil != other.idProvaBrasil)
+			return false;
+		if (idSerie != other.idSerie)
+			return false;
+		if (idUf != other.idUf)
+			return false;
+		if (mediaLp == null) {
+			if (other.mediaLp != null)
+				return false;
+		} else if (!mediaLp.equals(other.mediaLp))
+			return false;
+		if (mediaMt == null) {
+			if (other.mediaMt != null)
+				return false;
+		} else if (!mediaMt.equals(other.mediaMt))
+			return false;
+		if (nuMatriculadosCenso == null) {
+			if (other.nuMatriculadosCenso != null)
+				return false;
+		} else if (!nuMatriculadosCenso.equals(other.nuMatriculadosCenso))
+			return false;
+		if (nuPresentes == null) {
+			if (other.nuPresentes != null)
+				return false;
+		} else if (!nuPresentes.equals(other.nuPresentes))
+			return false;
+		if (taxaParticipacao == null) {
+			if (other.taxaParticipacao != null)
+				return false;
+		} else if (!taxaParticipacao.equals(other.taxaParticipacao))
+			return false;
+		return true;
+	}
+
 }

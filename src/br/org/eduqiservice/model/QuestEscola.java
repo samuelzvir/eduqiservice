@@ -824,4 +824,514 @@ public class QuestEscola implements Serializable {
 		this.txRespQ066 = txRespQ066;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + idDependenciaAdm;
+		result = prime * result
+				+ ((idEscola == null) ? 0 : idEscola.hashCode());
+		result = prime * result + idLocalizacao;
+		result = prime * result
+				+ ((idMunicipio == null) ? 0 : idMunicipio.hashCode());
+		result = prime * result + idProvaBrasil;
+		result = prime * result + idUf;
+		result = prime * result + inPreenchimento;
+		result = prime * result
+				+ ((txRespQ001 == null) ? 0 : txRespQ001.hashCode());
+		result = prime * result
+				+ ((txRespQ002 == null) ? 0 : txRespQ002.hashCode());
+		result = prime * result
+				+ ((txRespQ003 == null) ? 0 : txRespQ003.hashCode());
+		result = prime * result
+				+ ((txRespQ004 == null) ? 0 : txRespQ004.hashCode());
+		result = prime * result
+				+ ((txRespQ005 == null) ? 0 : txRespQ005.hashCode());
+		result = prime * result
+				+ ((txRespQ006 == null) ? 0 : txRespQ006.hashCode());
+		result = prime * result
+				+ ((txRespQ007 == null) ? 0 : txRespQ007.hashCode());
+		result = prime * result
+				+ ((txRespQ008 == null) ? 0 : txRespQ008.hashCode());
+		result = prime * result
+				+ ((txRespQ009 == null) ? 0 : txRespQ009.hashCode());
+		result = prime * result
+				+ ((txRespQ010 == null) ? 0 : txRespQ010.hashCode());
+		result = prime * result
+				+ ((txRespQ011 == null) ? 0 : txRespQ011.hashCode());
+		result = prime * result
+				+ ((txRespQ012 == null) ? 0 : txRespQ012.hashCode());
+		result = prime * result
+				+ ((txRespQ013 == null) ? 0 : txRespQ013.hashCode());
+		result = prime * result
+				+ ((txRespQ014 == null) ? 0 : txRespQ014.hashCode());
+		result = prime * result
+				+ ((txRespQ015 == null) ? 0 : txRespQ015.hashCode());
+		result = prime * result
+				+ ((txRespQ016 == null) ? 0 : txRespQ016.hashCode());
+		result = prime * result
+				+ ((txRespQ017 == null) ? 0 : txRespQ017.hashCode());
+		result = prime * result
+				+ ((txRespQ018 == null) ? 0 : txRespQ018.hashCode());
+		result = prime * result
+				+ ((txRespQ019 == null) ? 0 : txRespQ019.hashCode());
+		result = prime * result
+				+ ((txRespQ020 == null) ? 0 : txRespQ020.hashCode());
+		result = prime * result
+				+ ((txRespQ021 == null) ? 0 : txRespQ021.hashCode());
+		result = prime * result
+				+ ((txRespQ022 == null) ? 0 : txRespQ022.hashCode());
+		result = prime * result
+				+ ((txRespQ023 == null) ? 0 : txRespQ023.hashCode());
+		result = prime * result
+				+ ((txRespQ024 == null) ? 0 : txRespQ024.hashCode());
+		result = prime * result
+				+ ((txRespQ025 == null) ? 0 : txRespQ025.hashCode());
+		result = prime * result
+				+ ((txRespQ026 == null) ? 0 : txRespQ026.hashCode());
+		result = prime * result
+				+ ((txRespQ027 == null) ? 0 : txRespQ027.hashCode());
+		result = prime * result
+				+ ((txRespQ028 == null) ? 0 : txRespQ028.hashCode());
+		result = prime * result
+				+ ((txRespQ029 == null) ? 0 : txRespQ029.hashCode());
+		result = prime * result
+				+ ((txRespQ030 == null) ? 0 : txRespQ030.hashCode());
+		result = prime * result
+				+ ((txRespQ031 == null) ? 0 : txRespQ031.hashCode());
+		result = prime * result
+				+ ((txRespQ032 == null) ? 0 : txRespQ032.hashCode());
+		result = prime * result
+				+ ((txRespQ033 == null) ? 0 : txRespQ033.hashCode());
+		result = prime * result
+				+ ((txRespQ034 == null) ? 0 : txRespQ034.hashCode());
+		result = prime * result
+				+ ((txRespQ035 == null) ? 0 : txRespQ035.hashCode());
+		result = prime * result
+				+ ((txRespQ036 == null) ? 0 : txRespQ036.hashCode());
+		result = prime * result
+				+ ((txRespQ037 == null) ? 0 : txRespQ037.hashCode());
+		result = prime * result
+				+ ((txRespQ038 == null) ? 0 : txRespQ038.hashCode());
+		result = prime * result
+				+ ((txRespQ039 == null) ? 0 : txRespQ039.hashCode());
+		result = prime * result
+				+ ((txRespQ040 == null) ? 0 : txRespQ040.hashCode());
+		result = prime * result
+				+ ((txRespQ041 == null) ? 0 : txRespQ041.hashCode());
+		result = prime * result
+				+ ((txRespQ042 == null) ? 0 : txRespQ042.hashCode());
+		result = prime * result
+				+ ((txRespQ043 == null) ? 0 : txRespQ043.hashCode());
+		result = prime * result
+				+ ((txRespQ044 == null) ? 0 : txRespQ044.hashCode());
+		result = prime * result
+				+ ((txRespQ045 == null) ? 0 : txRespQ045.hashCode());
+		result = prime * result
+				+ ((txRespQ046 == null) ? 0 : txRespQ046.hashCode());
+		result = prime * result
+				+ ((txRespQ047 == null) ? 0 : txRespQ047.hashCode());
+		result = prime * result
+				+ ((txRespQ048 == null) ? 0 : txRespQ048.hashCode());
+		result = prime * result
+				+ ((txRespQ049 == null) ? 0 : txRespQ049.hashCode());
+		result = prime * result
+				+ ((txRespQ050 == null) ? 0 : txRespQ050.hashCode());
+		result = prime * result
+				+ ((txRespQ051 == null) ? 0 : txRespQ051.hashCode());
+		result = prime * result
+				+ ((txRespQ052 == null) ? 0 : txRespQ052.hashCode());
+		result = prime * result
+				+ ((txRespQ053 == null) ? 0 : txRespQ053.hashCode());
+		result = prime * result
+				+ ((txRespQ054 == null) ? 0 : txRespQ054.hashCode());
+		result = prime * result
+				+ ((txRespQ055 == null) ? 0 : txRespQ055.hashCode());
+		result = prime * result
+				+ ((txRespQ056 == null) ? 0 : txRespQ056.hashCode());
+		result = prime * result
+				+ ((txRespQ057 == null) ? 0 : txRespQ057.hashCode());
+		result = prime * result
+				+ ((txRespQ058 == null) ? 0 : txRespQ058.hashCode());
+		result = prime * result
+				+ ((txRespQ059 == null) ? 0 : txRespQ059.hashCode());
+		result = prime * result
+				+ ((txRespQ060 == null) ? 0 : txRespQ060.hashCode());
+		result = prime * result
+				+ ((txRespQ061 == null) ? 0 : txRespQ061.hashCode());
+		result = prime * result
+				+ ((txRespQ062 == null) ? 0 : txRespQ062.hashCode());
+		result = prime * result
+				+ ((txRespQ063 == null) ? 0 : txRespQ063.hashCode());
+		result = prime * result
+				+ ((txRespQ064 == null) ? 0 : txRespQ064.hashCode());
+		result = prime * result
+				+ ((txRespQ065 == null) ? 0 : txRespQ065.hashCode());
+		result = prime * result
+				+ ((txRespQ066 == null) ? 0 : txRespQ066.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		QuestEscola other = (QuestEscola) obj;
+		if (idDependenciaAdm != other.idDependenciaAdm)
+			return false;
+		if (idEscola == null) {
+			if (other.idEscola != null)
+				return false;
+		} else if (!idEscola.equals(other.idEscola))
+			return false;
+		if (idLocalizacao != other.idLocalizacao)
+			return false;
+		if (idMunicipio == null) {
+			if (other.idMunicipio != null)
+				return false;
+		} else if (!idMunicipio.equals(other.idMunicipio))
+			return false;
+		if (idProvaBrasil != other.idProvaBrasil)
+			return false;
+		if (idUf != other.idUf)
+			return false;
+		if (inPreenchimento != other.inPreenchimento)
+			return false;
+		if (txRespQ001 == null) {
+			if (other.txRespQ001 != null)
+				return false;
+		} else if (!txRespQ001.equals(other.txRespQ001))
+			return false;
+		if (txRespQ002 == null) {
+			if (other.txRespQ002 != null)
+				return false;
+		} else if (!txRespQ002.equals(other.txRespQ002))
+			return false;
+		if (txRespQ003 == null) {
+			if (other.txRespQ003 != null)
+				return false;
+		} else if (!txRespQ003.equals(other.txRespQ003))
+			return false;
+		if (txRespQ004 == null) {
+			if (other.txRespQ004 != null)
+				return false;
+		} else if (!txRespQ004.equals(other.txRespQ004))
+			return false;
+		if (txRespQ005 == null) {
+			if (other.txRespQ005 != null)
+				return false;
+		} else if (!txRespQ005.equals(other.txRespQ005))
+			return false;
+		if (txRespQ006 == null) {
+			if (other.txRespQ006 != null)
+				return false;
+		} else if (!txRespQ006.equals(other.txRespQ006))
+			return false;
+		if (txRespQ007 == null) {
+			if (other.txRespQ007 != null)
+				return false;
+		} else if (!txRespQ007.equals(other.txRespQ007))
+			return false;
+		if (txRespQ008 == null) {
+			if (other.txRespQ008 != null)
+				return false;
+		} else if (!txRespQ008.equals(other.txRespQ008))
+			return false;
+		if (txRespQ009 == null) {
+			if (other.txRespQ009 != null)
+				return false;
+		} else if (!txRespQ009.equals(other.txRespQ009))
+			return false;
+		if (txRespQ010 == null) {
+			if (other.txRespQ010 != null)
+				return false;
+		} else if (!txRespQ010.equals(other.txRespQ010))
+			return false;
+		if (txRespQ011 == null) {
+			if (other.txRespQ011 != null)
+				return false;
+		} else if (!txRespQ011.equals(other.txRespQ011))
+			return false;
+		if (txRespQ012 == null) {
+			if (other.txRespQ012 != null)
+				return false;
+		} else if (!txRespQ012.equals(other.txRespQ012))
+			return false;
+		if (txRespQ013 == null) {
+			if (other.txRespQ013 != null)
+				return false;
+		} else if (!txRespQ013.equals(other.txRespQ013))
+			return false;
+		if (txRespQ014 == null) {
+			if (other.txRespQ014 != null)
+				return false;
+		} else if (!txRespQ014.equals(other.txRespQ014))
+			return false;
+		if (txRespQ015 == null) {
+			if (other.txRespQ015 != null)
+				return false;
+		} else if (!txRespQ015.equals(other.txRespQ015))
+			return false;
+		if (txRespQ016 == null) {
+			if (other.txRespQ016 != null)
+				return false;
+		} else if (!txRespQ016.equals(other.txRespQ016))
+			return false;
+		if (txRespQ017 == null) {
+			if (other.txRespQ017 != null)
+				return false;
+		} else if (!txRespQ017.equals(other.txRespQ017))
+			return false;
+		if (txRespQ018 == null) {
+			if (other.txRespQ018 != null)
+				return false;
+		} else if (!txRespQ018.equals(other.txRespQ018))
+			return false;
+		if (txRespQ019 == null) {
+			if (other.txRespQ019 != null)
+				return false;
+		} else if (!txRespQ019.equals(other.txRespQ019))
+			return false;
+		if (txRespQ020 == null) {
+			if (other.txRespQ020 != null)
+				return false;
+		} else if (!txRespQ020.equals(other.txRespQ020))
+			return false;
+		if (txRespQ021 == null) {
+			if (other.txRespQ021 != null)
+				return false;
+		} else if (!txRespQ021.equals(other.txRespQ021))
+			return false;
+		if (txRespQ022 == null) {
+			if (other.txRespQ022 != null)
+				return false;
+		} else if (!txRespQ022.equals(other.txRespQ022))
+			return false;
+		if (txRespQ023 == null) {
+			if (other.txRespQ023 != null)
+				return false;
+		} else if (!txRespQ023.equals(other.txRespQ023))
+			return false;
+		if (txRespQ024 == null) {
+			if (other.txRespQ024 != null)
+				return false;
+		} else if (!txRespQ024.equals(other.txRespQ024))
+			return false;
+		if (txRespQ025 == null) {
+			if (other.txRespQ025 != null)
+				return false;
+		} else if (!txRespQ025.equals(other.txRespQ025))
+			return false;
+		if (txRespQ026 == null) {
+			if (other.txRespQ026 != null)
+				return false;
+		} else if (!txRespQ026.equals(other.txRespQ026))
+			return false;
+		if (txRespQ027 == null) {
+			if (other.txRespQ027 != null)
+				return false;
+		} else if (!txRespQ027.equals(other.txRespQ027))
+			return false;
+		if (txRespQ028 == null) {
+			if (other.txRespQ028 != null)
+				return false;
+		} else if (!txRespQ028.equals(other.txRespQ028))
+			return false;
+		if (txRespQ029 == null) {
+			if (other.txRespQ029 != null)
+				return false;
+		} else if (!txRespQ029.equals(other.txRespQ029))
+			return false;
+		if (txRespQ030 == null) {
+			if (other.txRespQ030 != null)
+				return false;
+		} else if (!txRespQ030.equals(other.txRespQ030))
+			return false;
+		if (txRespQ031 == null) {
+			if (other.txRespQ031 != null)
+				return false;
+		} else if (!txRespQ031.equals(other.txRespQ031))
+			return false;
+		if (txRespQ032 == null) {
+			if (other.txRespQ032 != null)
+				return false;
+		} else if (!txRespQ032.equals(other.txRespQ032))
+			return false;
+		if (txRespQ033 == null) {
+			if (other.txRespQ033 != null)
+				return false;
+		} else if (!txRespQ033.equals(other.txRespQ033))
+			return false;
+		if (txRespQ034 == null) {
+			if (other.txRespQ034 != null)
+				return false;
+		} else if (!txRespQ034.equals(other.txRespQ034))
+			return false;
+		if (txRespQ035 == null) {
+			if (other.txRespQ035 != null)
+				return false;
+		} else if (!txRespQ035.equals(other.txRespQ035))
+			return false;
+		if (txRespQ036 == null) {
+			if (other.txRespQ036 != null)
+				return false;
+		} else if (!txRespQ036.equals(other.txRespQ036))
+			return false;
+		if (txRespQ037 == null) {
+			if (other.txRespQ037 != null)
+				return false;
+		} else if (!txRespQ037.equals(other.txRespQ037))
+			return false;
+		if (txRespQ038 == null) {
+			if (other.txRespQ038 != null)
+				return false;
+		} else if (!txRespQ038.equals(other.txRespQ038))
+			return false;
+		if (txRespQ039 == null) {
+			if (other.txRespQ039 != null)
+				return false;
+		} else if (!txRespQ039.equals(other.txRespQ039))
+			return false;
+		if (txRespQ040 == null) {
+			if (other.txRespQ040 != null)
+				return false;
+		} else if (!txRespQ040.equals(other.txRespQ040))
+			return false;
+		if (txRespQ041 == null) {
+			if (other.txRespQ041 != null)
+				return false;
+		} else if (!txRespQ041.equals(other.txRespQ041))
+			return false;
+		if (txRespQ042 == null) {
+			if (other.txRespQ042 != null)
+				return false;
+		} else if (!txRespQ042.equals(other.txRespQ042))
+			return false;
+		if (txRespQ043 == null) {
+			if (other.txRespQ043 != null)
+				return false;
+		} else if (!txRespQ043.equals(other.txRespQ043))
+			return false;
+		if (txRespQ044 == null) {
+			if (other.txRespQ044 != null)
+				return false;
+		} else if (!txRespQ044.equals(other.txRespQ044))
+			return false;
+		if (txRespQ045 == null) {
+			if (other.txRespQ045 != null)
+				return false;
+		} else if (!txRespQ045.equals(other.txRespQ045))
+			return false;
+		if (txRespQ046 == null) {
+			if (other.txRespQ046 != null)
+				return false;
+		} else if (!txRespQ046.equals(other.txRespQ046))
+			return false;
+		if (txRespQ047 == null) {
+			if (other.txRespQ047 != null)
+				return false;
+		} else if (!txRespQ047.equals(other.txRespQ047))
+			return false;
+		if (txRespQ048 == null) {
+			if (other.txRespQ048 != null)
+				return false;
+		} else if (!txRespQ048.equals(other.txRespQ048))
+			return false;
+		if (txRespQ049 == null) {
+			if (other.txRespQ049 != null)
+				return false;
+		} else if (!txRespQ049.equals(other.txRespQ049))
+			return false;
+		if (txRespQ050 == null) {
+			if (other.txRespQ050 != null)
+				return false;
+		} else if (!txRespQ050.equals(other.txRespQ050))
+			return false;
+		if (txRespQ051 == null) {
+			if (other.txRespQ051 != null)
+				return false;
+		} else if (!txRespQ051.equals(other.txRespQ051))
+			return false;
+		if (txRespQ052 == null) {
+			if (other.txRespQ052 != null)
+				return false;
+		} else if (!txRespQ052.equals(other.txRespQ052))
+			return false;
+		if (txRespQ053 == null) {
+			if (other.txRespQ053 != null)
+				return false;
+		} else if (!txRespQ053.equals(other.txRespQ053))
+			return false;
+		if (txRespQ054 == null) {
+			if (other.txRespQ054 != null)
+				return false;
+		} else if (!txRespQ054.equals(other.txRespQ054))
+			return false;
+		if (txRespQ055 == null) {
+			if (other.txRespQ055 != null)
+				return false;
+		} else if (!txRespQ055.equals(other.txRespQ055))
+			return false;
+		if (txRespQ056 == null) {
+			if (other.txRespQ056 != null)
+				return false;
+		} else if (!txRespQ056.equals(other.txRespQ056))
+			return false;
+		if (txRespQ057 == null) {
+			if (other.txRespQ057 != null)
+				return false;
+		} else if (!txRespQ057.equals(other.txRespQ057))
+			return false;
+		if (txRespQ058 == null) {
+			if (other.txRespQ058 != null)
+				return false;
+		} else if (!txRespQ058.equals(other.txRespQ058))
+			return false;
+		if (txRespQ059 == null) {
+			if (other.txRespQ059 != null)
+				return false;
+		} else if (!txRespQ059.equals(other.txRespQ059))
+			return false;
+		if (txRespQ060 == null) {
+			if (other.txRespQ060 != null)
+				return false;
+		} else if (!txRespQ060.equals(other.txRespQ060))
+			return false;
+		if (txRespQ061 == null) {
+			if (other.txRespQ061 != null)
+				return false;
+		} else if (!txRespQ061.equals(other.txRespQ061))
+			return false;
+		if (txRespQ062 == null) {
+			if (other.txRespQ062 != null)
+				return false;
+		} else if (!txRespQ062.equals(other.txRespQ062))
+			return false;
+		if (txRespQ063 == null) {
+			if (other.txRespQ063 != null)
+				return false;
+		} else if (!txRespQ063.equals(other.txRespQ063))
+			return false;
+		if (txRespQ064 == null) {
+			if (other.txRespQ064 != null)
+				return false;
+		} else if (!txRespQ064.equals(other.txRespQ064))
+			return false;
+		if (txRespQ065 == null) {
+			if (other.txRespQ065 != null)
+				return false;
+		} else if (!txRespQ065.equals(other.txRespQ065))
+			return false;
+		if (txRespQ066 == null) {
+			if (other.txRespQ066 != null)
+				return false;
+		} else if (!txRespQ066.equals(other.txRespQ066))
+			return false;
+		return true;
+	}
+	
 }
