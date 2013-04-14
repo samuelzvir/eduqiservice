@@ -5,6 +5,8 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
+import br.org.eduqiservice.control.CacheSearchController;
+
 /**
  * Listener utilizado para iniciar o processamento dos dados.
  *
@@ -22,7 +24,8 @@ public class InitDataListener implements ServletContextListener, HttpSessionList
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent arg0) {
-        System.out.println("Incia app!");
+        System.out.println("Carrega dados");
+        CacheSearchController.initCacheSearchList();
     }
 
 	/**
