@@ -1,5 +1,7 @@
 package br.org.eduqiservice.domain;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +18,7 @@ public class AnswerStats {
 	int inexistente;
 	
 	
-	private static List<ProbAnswers> probAnswers;
+	private static List<ProbAnswers> probAnswers = new ArrayList<ProbAnswers>();
 	
 	private static Map<Integer,DescricaoQuestionarioEscola> descricaoQuestionarioEscola;
 	
@@ -475,7 +477,10 @@ public class AnswerStats {
 		prob.setBom(calcProp(size, inexistente));
 		
 		if(descricaoQuestionarioEscola == null){
+			descricaoQuestionarioEscola = new HashMap<>();
+			
 			DescricaoQuestionarioEscolaDAOImpl dao = new DescricaoQuestionarioEscolaDAOImpl();
+			
 			List<DescricaoQuestionarioEscola> temp= dao.listAll();
 			for (DescricaoQuestionarioEscola descricaoQuestionarioEscola : temp) {
 				this.descricaoQuestionarioEscola.put(descricaoQuestionarioEscola.getIdResposta(), descricaoQuestionarioEscola);

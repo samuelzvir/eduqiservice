@@ -21,6 +21,7 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class)
 			    .addOrder(Property.forName("mediaMt").desc()).setMaxResults(100).list();
+		session.close();
 		
 		return escolas;
 	}
@@ -34,8 +35,9 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").desc()).setMaxResults(100).list();
-		
-		return escolas;
+			session.close();
+			
+			return escolas;
 	}
 	
 	/**
@@ -47,6 +49,7 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaMt").asc()).setMaxResults(100).list();
+		session.close();
 		
 		return escolas;
 	}
@@ -60,6 +63,7 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").asc()).setMaxResults(100).list();
+		session.close();
 		
 		return escolas;
 	}
