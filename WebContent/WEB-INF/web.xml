@@ -22,4 +22,14 @@
   <listener>
     <listener-class>br.org.eduqiservice.listener.InitDataListener</listener-class>
   </listener>
+  <servlet>
+    <description></description>
+    <display-name>QuestServlet</display-name>
+    <servlet-name>QuestServlet</servlet-name>
+    <servlet-class>br.org.eduqiservice.servlets.QuestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuestServlet</servlet-name>
+    <url-pattern>/questservlet</url-pattern>
+  </servlet-mapping>
 </web-app>

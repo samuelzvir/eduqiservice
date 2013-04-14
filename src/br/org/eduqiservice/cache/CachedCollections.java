@@ -15,7 +15,6 @@ public class CachedCollections {
 	private static String cacheSearchObjects;
 	private static Map<String, Double> mathAverage;
 	private static Map<String, Double> portugueseAverage;
-
 	
 	
 	//Getters e Setters
