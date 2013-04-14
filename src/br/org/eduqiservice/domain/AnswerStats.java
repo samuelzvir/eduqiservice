@@ -465,16 +465,19 @@ public class AnswerStats {
 	}
 	
 	private double calcProp(int size, int occu){
-		double result = (occu * 100)/size;
+		double a = occu;
+		double b = size;
+		
+		double result =  (a * 100.00)/b;
 		return result;
 	}
 	
 	private void getProbAnswers(int size, int idQuest){
 		ProbAnswers prob = new ProbAnswers();
 		prob.setBom(calcProp(size, bom));
-		prob.setBom(calcProp(size, regular));
-		prob.setBom(calcProp(size, ruim));
-		prob.setBom(calcProp(size, inexistente));
+		prob.setRegular(calcProp(size, regular));
+		prob.setRuim(calcProp(size, ruim));
+		prob.setInexistente(calcProp(size, inexistente));
 		
 		if(descricaoQuestionarioEscola == null){
 			descricaoQuestionarioEscola = new HashMap<>();

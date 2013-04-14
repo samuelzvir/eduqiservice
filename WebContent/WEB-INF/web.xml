@@ -40,6 +40,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ProbServlet</servlet-name>
-    <url-pattern>/ProbServlet</url-pattern>
+    <url-pattern>/probservlet</url-pattern>
   </servlet-mapping>
 </web-app>
