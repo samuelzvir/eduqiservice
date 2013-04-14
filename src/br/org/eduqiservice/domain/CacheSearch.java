@@ -1,4 +1,4 @@
-package br.org.eduqi.domain;
+package br.org.eduqiservice.domain;
 
 /**
  * Objeto utilizado no cache de pesquisa 

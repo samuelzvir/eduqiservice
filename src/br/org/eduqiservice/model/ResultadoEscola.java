@@ -25,7 +25,7 @@ public class ResultadoEscola implements Serializable {
     @Basic(optional = false)
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_ESCOLA")
-	private BigInteger idEscola;
+	private Integer idEscola;
 
 	@Column(name="ID_LOCALIZACAO")
 	private int idLocalizacao;
@@ -76,11 +76,11 @@ public class ResultadoEscola implements Serializable {
 		this.idDivulgacao = idDivulgacao;
 	}
 
-	public BigInteger getIdEscola() {
+	public Integer getIdEscola() {
 		return this.idEscola;
 	}
 
-	public void setIdEscola(BigInteger idEscola) {
+	public void setIdEscola(Integer idEscola) {
 		this.idEscola = idEscola;
 	}
 

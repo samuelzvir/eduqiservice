@@ -13,13 +13,13 @@
     <description></description>
     <display-name>CacheSearchServlet</display-name>
     <servlet-name>CacheSearchServlet</servlet-name>
-    <servlet-class>br.org.eduqi.servlets.CacheSearchServlet</servlet-class>
+    <servlet-class>br.org.eduqiservice.servlets.CacheSearchServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CacheSearchServlet</servlet-name>
     <url-pattern>/CacheSearchServlet</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>br.org.eduqi.listener.InitDataListener</listener-class>
+    <listener-class>br.org.eduqiservice.listener.InitDataListener</listener-class>
   </listener>
 </web-app>

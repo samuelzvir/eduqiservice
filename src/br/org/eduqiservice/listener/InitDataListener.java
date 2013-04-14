@@ -1,4 +1,4 @@
-package br.org.eduqi.listener;
+package br.org.eduqiservice.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

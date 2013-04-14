@@ -1,8 +1,8 @@
-package br.org.eduqi.cache;
+package br.org.eduqiservice.cache;
 
 import java.util.List;
 
-import br.org.eduqi.domain.CacheSearch;
+import br.org.eduqiservice.domain.CacheSearch;
 
 /**
  * Esta classe tem a responsabilidade de manter dados que são utilizados pela aplicão em cache.

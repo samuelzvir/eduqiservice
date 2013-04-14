@@ -13,8 +13,10 @@
    <mapping class="br.org.eduqiservice.model.QuestAluno"/>
    <mapping class="br.org.eduqiservice.model.QuestDiretor"/>
    <mapping class="br.org.eduqiservice.model.QuestEscola"/>
+   <mapping class="br.org.eduqiservice.model.DadosEscola"/>
    <mapping class="br.org.eduqiservice.model.ResultadoAluno"/>
    <mapping class="br.org.eduqiservice.model.ResultadoEscola"/>
    <mapping class="br.org.eduqiservice.model.ResultadoMunicipio"/>
+   
   </session-factory>
 </hibernate-configuration>

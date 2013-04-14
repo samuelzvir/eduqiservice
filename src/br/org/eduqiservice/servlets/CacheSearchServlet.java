@@ -1,4 +1,4 @@
-package br.org.eduqi.servlets;
+package br.org.eduqiservice.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
