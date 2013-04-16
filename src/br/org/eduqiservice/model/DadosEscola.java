@@ -16,7 +16,7 @@ public class DadosEscola implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_ESCOLA")
-	private int idEscola;
+	private Integer idEscola;
 
 	@Column(name="NOME_ESCOLA")
 	private String nomeEscola;

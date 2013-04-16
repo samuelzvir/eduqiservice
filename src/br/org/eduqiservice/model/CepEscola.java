@@ -16,7 +16,7 @@ public class CepEscola implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_ESCOLA")
-	private int idEscola;
+	private Integer idEscola;
 
 	@Column(name="NUM_CEP")
 	private String numCep;

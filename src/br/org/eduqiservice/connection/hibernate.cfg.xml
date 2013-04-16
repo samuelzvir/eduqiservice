@@ -7,7 +7,7 @@
    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">eduqi1404</property>
-    <property name="c3p0.timeout">60000</property>
+    <property name="c3p0.timeout">2400000</property>
     <property name="hibernate.hbm2ddl.auto">update</property>  
    
    
