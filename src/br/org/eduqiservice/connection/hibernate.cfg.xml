@@ -3,11 +3,12 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://192.168.0.109:3306/eduqi</property>
+    <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/eduqi</property>
    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">1234</property>
+    <property name="hibernate.connection.password">eduqi1404</property>
     <property name="c3p0.timeout">60000</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>  
    
    
    <!--   <mapping class="br.com.schalter.vo.Mensagem"/> --> 
