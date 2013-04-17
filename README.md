@@ -13,10 +13,14 @@ EduQI Service é o serviço responsável por disponibilizar todos os dados para 
 Como é um serviço todos os dados utilizados na exibição podem ser consumidos por outros aplicativos acessando os
 seguintes endereços:
 
+(Porcentagem de respostas do questionário socio-econômico das 1000 primeiras escolas)
 http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/probservlet
 
+(Serviço que retorna o CEP da escola de acordo com o id da escola)
 http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/cepprovider?idEscola=11024682 (11024682= exemplo de escola)
 
-http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/probservlet
+(Serviço de de respostas do questionário socio-econômico da escola selecionada)
+http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/questservlet?idEscola=11024682 (11024682= exemplo de escola)
+
 
 OBS: Os dados estão disponíveis no formato JSON.
