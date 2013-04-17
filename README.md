@@ -20,14 +20,14 @@ http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/probs
 
 
 (Serviço que retorna o CEP da escola de acordo com o id da escola)
-http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/cepprovider?idEscola=11024682 (11024682= exemplo de escola)
-
+http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/cepprovider?idEscola=11024682
 
 (Serviço de de respostas do questionário socio-econômico da escola selecionada)
-http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/questservlet?idEscola=11024682 (11024682= exemplo de escola)
+http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/questservlet?idEscola=11024682 
 
 
 
 
 
 OBS: Os dados estão disponíveis no formato JSON.
+(o valor 11024682 é um exemplo de id de escola)
