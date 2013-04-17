@@ -15,7 +15,7 @@ seguintes endereços:
 
 http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/probservlet
 
-http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/cepprovider?idEscola=11024682
+http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/cepprovider?idEscola=11024682 (11024682= exemplo de escola)
 
 http://ec2-54-232-204-44.sa-east-1.compute.amazonaws.com:8080/eduqi-server/probservlet
 
