@@ -20,7 +20,7 @@ http://54.232.204.9:8080/eduqi-server/probservlet
 
 
 (Serviço que retorna o CEP da escola de acordo com o id da escola)
-http://54.232.204.9/:8080/eduqi-server/cepprovider?idEscola=11024682
+http://54.232.204.9:8080/eduqi-server/cepprovider?idEscola=11024682
 
 (Serviço de de respostas do questionário socio-econômico da escola selecionada)
 http://54.232.204.9:8080/eduqi-server/questservlet?idEscola=11024682 
