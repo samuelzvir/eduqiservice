@@ -31,3 +31,5 @@ http://54.232.204.9:8080/eduqi-server/questservlet?idEscola=11024682
 
 OBS: Os dados estão disponíveis no formato JSON.
 (o valor 11024682 é um exemplo de id de escola)
+
+http://eduqi.org/
