@@ -1,5 +1,5 @@
-eduqiservice
-============
+Eduqi Service
+=============
 
 Sobre
 
@@ -16,20 +16,16 @@ seguintes endereços:
 
 
 (Porcentagem de respostas do questionário socio-econômico das 1000 primeiras escolas)
-http://54.232.204.9:8080/eduqi-server/probservlet
+http://[host da aplicacao]:[porta]/eduqi-server/probservlet
 
 
 (Serviço que retorna o CEP da escola de acordo com o id da escola)
-http://54.232.204.9:8080/eduqi-server/cepprovider?idEscola=11024682
+http://[host da aplicacao]:[porta]/eduqi-server/cepprovider?idEscola=[id da escola]
 
 (Serviço de de respostas do questionário socio-econômico da escola selecionada)
-http://54.232.204.9:8080/eduqi-server/questservlet?idEscola=11024682 
-
-
-
+http://[host da aplicacao]:[porta]/eduqi-server/questservlet?idEscola=[id da escola] 
 
 
 OBS: Os dados estão disponíveis no formato JSON.
-(o valor 11024682 é um exemplo de id de escola)
 
 http://eduqi.org/
