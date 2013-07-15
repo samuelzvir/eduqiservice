@@ -3,6 +3,7 @@ package br.org.eduqiservice.dao;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.criterion.Property;
 
@@ -13,6 +14,9 @@ import br.org.eduqiservice.util.HibernateUtil;
 
 public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola> implements ResultadoEscolaDAO {
 
+	
+	private static Logger log = Logger.getLogger(ResultadoEscolaDAOImpl.class);
+	
 	/**
 	 * Retorna as N escolas com notas mais altas em MT
 	 * @return
@@ -25,9 +29,9 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 				number =Integer.parseInt( PropertiesLoader.getProps().getProperty("numero-escolas-media-alta-mt") );
 		
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		}
 	
 	
@@ -51,9 +55,9 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 				number =Integer.parseInt( PropertiesLoader.getProps().getProperty("numero-escolas-media-alta-lp") );
 		
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		}
 	
 		@SuppressWarnings("unchecked")
@@ -75,9 +79,9 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 				number =Integer.parseInt( PropertiesLoader.getProps().getProperty("numero-escolas-media-baixa-mt") );
 		
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		}
 		
 		@SuppressWarnings("unchecked")
@@ -99,9 +103,9 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 				number =Integer.parseInt( PropertiesLoader.getProps().getProperty("numero-escolas-media-baixa-lp") );
 		
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		}
 		
 		@SuppressWarnings("unchecked")

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -12,6 +13,7 @@ import br.org.eduqiservice.util.HibernateUtil;
 
 public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 
+	private static Logger log = Logger.getLogger(HibernateGenericDAO.class);
 	private Class<T> persistentClass;
 	private Session session;
 
@@ -36,7 +38,7 @@ public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 
 		} catch (HibernateException e) {
 
-			e.printStackTrace();
+			log.error(e,e);
 			tx.rollback();
 
 		} finally {
@@ -56,7 +58,7 @@ public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 
 		} catch (HibernateException e) {
 
-			e.printStackTrace();
+			log.error(e,e);
 			tx.rollback();
 		} finally {
 			session.close();
@@ -70,7 +72,7 @@ public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 			return this.session.createCriteria(this.persistentClass).list();
 
 		} catch (HibernateException e) {
-			e.printStackTrace();
+			log.error(e,e);
 		} finally {
 			session.close();
 		}
@@ -89,7 +91,7 @@ public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 			tx.commit();
 
 		} catch (HibernateException e) {
-			e.printStackTrace();
+			log.error(e,e);
 			tx.rollback();
 		} finally {
 			session.close();
