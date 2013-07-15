@@ -1,6 +1,6 @@
 package br.org.eduqiservice.domain;
 
-public class ProbAnswers {
+public class AnswersTypes {
 
 	private String question;
 	private double bom;
