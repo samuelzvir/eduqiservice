@@ -1,10 +1,13 @@
 package br.org.eduqiservice.servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
 
 import br.org.eduqiservice.control.InvestmentController;
 
@@ -13,7 +16,8 @@ import br.org.eduqiservice.control.InvestmentController;
  */
 public class QuestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    private static Logger log = Logger.getLogger(QuestServlet.class);
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -32,6 +36,7 @@ public class QuestServlet extends HttpServlet {
 		
 		 int id = Integer.parseInt(request.getParameter("idEscola"));
 		
+		 log.info("Pesquisando escola: id="+ id+" .");
 		
 		String jsonCallbackParam = request.getParameter("callback");
 		String result = InvestmentController.giveSchoolStatistics(id);
