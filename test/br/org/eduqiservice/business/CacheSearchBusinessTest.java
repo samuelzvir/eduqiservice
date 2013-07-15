@@ -11,7 +11,7 @@ public class CacheSearchBusinessTest {
 	 */
 	@Test(timeout=20000)
 	public void testBuildCacheSearchList() {
-		CacheSearchBusiness.buildCacheSearchList();
+		assertNotNull(CacheSearchBusiness.buildCacheSearchList());
 	}
 
 }

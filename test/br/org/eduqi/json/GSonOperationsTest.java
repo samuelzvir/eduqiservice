@@ -7,7 +7,6 @@ import java.util.List;
 import org.junit.Test;
 
 import br.org.eduqiservice.dao.QuestEscolaDAOImpl;
-import br.org.eduqiservice.json.GSonOperations;
 import br.org.eduqiservice.model.QuestEscola;
 
 public class GSonOperationsTest {
@@ -17,7 +16,8 @@ public class GSonOperationsTest {
 		QuestEscolaDAOImpl dao = new QuestEscolaDAOImpl();
 		
 		List<QuestEscola> result = dao.listAll();
-		
+		assertNotNull(result);
+		assertTrue(result.size() > 0);
 		
 	}
 
