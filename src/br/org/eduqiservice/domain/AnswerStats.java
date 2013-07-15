@@ -18,15 +18,15 @@ public class AnswerStats {
 	int inexistente;
 	
 	
-	private static List<ProbAnswers> probAnswers = new ArrayList<ProbAnswers>();
+	private static List<AnswersTypes> probAnswers = new ArrayList<AnswersTypes>();
 	
 	private static Map<Integer,DescricaoQuestionarioEscola> descricaoQuestionarioEscola;
 	
-	public static List<ProbAnswers> getProbAnswers() {
+	public static List<AnswersTypes> getProbAnswers() {
 		return probAnswers;
 	}
 
-	public static void setProbAnswers(List<ProbAnswers> probAnswers) {
+	public static void setProbAnswers(List<AnswersTypes> probAnswers) {
 		AnswerStats.probAnswers = probAnswers;
 	}
 
@@ -473,7 +473,7 @@ public class AnswerStats {
 	}
 	
 	private void getProbAnswers(int size, int idQuest){
-		ProbAnswers prob = new ProbAnswers();
+		AnswersTypes prob = new AnswersTypes();
 		prob.setBom(calcProp(size, bom));
 		prob.setRegular(calcProp(size, regular));
 		prob.setRuim(calcProp(size, ruim));
@@ -486,7 +486,7 @@ public class AnswerStats {
 			
 			List<DescricaoQuestionarioEscola> temp= dao.listAll();
 			for (DescricaoQuestionarioEscola descricaoQuestionarioEscola : temp) {
-				this.descricaoQuestionarioEscola.put(descricaoQuestionarioEscola.getIdResposta(), descricaoQuestionarioEscola);
+				AnswerStats.descricaoQuestionarioEscola.put(descricaoQuestionarioEscola.getIdResposta(), descricaoQuestionarioEscola);
 			}
 		}
 		DescricaoQuestionarioEscola quest = descricaoQuestionarioEscola.get(idQuest);		

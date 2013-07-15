@@ -16,7 +16,6 @@ public abstract class HibernateGenericDAO<T> implements GenericDAO<T> {
 	private Session session;
 
 	public HibernateGenericDAO() {
-		//this.session = session;
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 	

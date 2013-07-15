@@ -1,9 +1,12 @@
 package br.org.eduqiservice.listener;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
+
+import com.propertiesconfig.util.PropertiesLoader;
 
 import br.org.eduqiservice.control.CacheSearchController;
 import br.org.eduqiservice.thread.ProbThread;
@@ -24,8 +27,14 @@ public class InitDataListener implements ServletContextListener, HttpSessionList
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
-    public void contextInitialized(ServletContextEvent arg0) {
-        System.out.println("Carrega dados");
+    public void contextInitialized(ServletContextEvent contextEvent) {
+        
+    	ServletContext context = contextEvent.getServletContext();
+    	
+    	String props = context.getRealPath("WEB-INF/properties/properties.properties");
+    	PropertiesLoader.setPropertiesPath(props);
+    	
+    	System.out.println("Carrega dados");
         CacheSearchController.initCacheSearchList();
         Thread t = new Thread(new ProbThread());
         t.start();        
