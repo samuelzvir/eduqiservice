@@ -6,9 +6,13 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import com.propertiesconfig.util.PropertiesLoader;
 
 import br.org.eduqiservice.control.CacheSearchController;
+import br.org.eduqiservice.log.LogUtils;
 import br.org.eduqiservice.thread.ProbThread;
 
 /**
@@ -17,48 +21,40 @@ import br.org.eduqiservice.thread.ProbThread;
  */
 public class InitDataListener implements ServletContextListener, HttpSessionListener {
 
+	Logger log = Logger.getLogger(InitDataListener.class);
+	
     /**
      * Default constructor. 
      */
-    public InitDataListener() {
-        // TODO Auto-generated constructor stub
-    }
+    public InitDataListener() {}
 
-	/**
-     * @see ServletContextListener#contextInitialized(ServletContextEvent)
-     */
     public void contextInitialized(ServletContextEvent contextEvent) {
         
     	ServletContext context = contextEvent.getServletContext();
     	
-    	String props = context.getRealPath("WEB-INF/properties/properties.properties");
+   
+    	//configura log4j
+    	String logpath = context.getRealPath("WEB-INF/log4j/log4j.properties");
+		LogUtils.setPathLog(logpath);
+		PropertyConfigurator.configure(logpath);
+    	
+		//configura propriedades utilizadas
+		String props = context.getRealPath("WEB-INF/properties/properties.properties");
     	PropertiesLoader.setPropertiesPath(props);
     	
-    	System.out.println("Carrega dados");
+    	log.info("Inicia o loading dos dados");
         CacheSearchController.initCacheSearchList();
         Thread t = new Thread(new ProbThread());
         t.start();        
     }
 
-	/**
-     * @see HttpSessionListener#sessionCreated(HttpSessionEvent)
-     */
-    public void sessionCreated(HttpSessionEvent arg0) {
-        // TODO Auto-generated method stub
-    }
+	@Override
+	public void sessionCreated(HttpSessionEvent arg0) {}
 
-	/**
-     * @see HttpSessionListener#sessionDestroyed(HttpSessionEvent)
-     */
-    public void sessionDestroyed(HttpSessionEvent arg0) {
-        // TODO Auto-generated method stub
-    }
+	@Override
+	public void sessionDestroyed(HttpSessionEvent arg0) {}
 
-	/**
-     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-     */
-    public void contextDestroyed(ServletContextEvent arg0) {
-        // TODO Auto-generated method stub
-    }
+	@Override
+	public void contextDestroyed(ServletContextEvent arg0) {}
 	
 }
