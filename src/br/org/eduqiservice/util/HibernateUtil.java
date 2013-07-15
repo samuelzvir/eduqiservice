@@ -1,11 +1,13 @@
 package br.org.eduqiservice.util;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class HibernateUtil {
 
+	private static Logger log = Logger.getLogger(HibernateUtil.class);
 	private static  SessionFactory sessionFactory;
 	private static final ThreadLocal<Session> threadLocal = new ThreadLocal<Session>();
 
@@ -14,7 +16,7 @@ public class HibernateUtil {
 				sessionFactory = new AnnotationConfiguration().configure("br/org/eduqiservice/connection/hibernate.cfg.xml").buildSessionFactory();
 
 		} catch (Throwable t) {
-			t.printStackTrace();
+			log.error(t,t);
 		}
 	}
 
