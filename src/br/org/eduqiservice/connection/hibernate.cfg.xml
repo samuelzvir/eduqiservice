@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eduqi</property>
-   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">1234</property>
-    <property name="c3p0.timeout">2400000</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>  
-   
-   
-   <!--   <mapping class="br.com.schalter.vo.Mensagem"/> --> 
+  <session-factory name="hibernate/SessionFactory">
+  
+  <property name="hibernate.connection.datasource">java:/comp/env/jdbc/eduqi</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.jdbc.batch_size">0</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
    <mapping class="br.org.eduqiservice.model.Item"/>
    <mapping class="br.org.eduqiservice.model.Peso"/>
    <mapping class="br.org.eduqiservice.model.QuestAluno"/>
