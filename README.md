@@ -35,3 +35,7 @@ http://[host da aplicacao]:[porta]/eduqi-server/questservlet?idEscola=[id da esc
 
 #### Acesse:
 http://eduqi.org/
+
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/samuelyuri/eduqiservice/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
