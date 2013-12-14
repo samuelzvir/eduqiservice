@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSessionListener;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import com.propertiesconfig.util.PropertiesLoader;
+import br.org.eduqiservice.util.PropertiesLoader;
 
 import br.org.eduqiservice.control.CacheSearchController;
 import br.org.eduqiservice.log.LogUtils;
