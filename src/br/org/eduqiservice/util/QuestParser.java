@@ -19,14 +19,14 @@ public class QuestParser {
 		}
 		return r;
 	}
-	public static String matchString(String character){
-		if(character.equalsIgnoreCase("a")){
+	public static String matchString(char character){
+		if(character == 'a'){
 			return "BOM";
 		}
-		else if(character.equalsIgnoreCase("b")){
+		else if(character == 'b'){
 			return "REGULAR";
 		}
-		else if(character.equalsIgnoreCase("c")){
+		else if(character == 'c'){
 			return "RUIM";
 		}
 		else{
