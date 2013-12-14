@@ -8,10 +8,16 @@ public class QuestParser {
 		switch (character) {
 		case 'a':r = "BOM";
 			break;
+		case 'A':r = "BOM";
+			break;	
 		
 		case 'b':r = "REGULAR";
 			break;
+		case 'B':r = "REGULAR";
+			break;	
 		case 'c':r = "RUIM";
+			break;
+		case 'C':r = "RUIM";
 			break;
 
 		default:r = "INEXISTENTE";
@@ -20,13 +26,13 @@ public class QuestParser {
 		return r;
 	}
 	public static String matchString(char character){
-		if(character == 'a'){
+		if(character == 'a' || character == 'A' ){
 			return "BOM";
 		}
-		else if(character == 'b'){
+		else if(character == 'b' || character == 'B'){
 			return "REGULAR";
 		}
-		else if(character == 'c'){
+		else if(character == 'c' || character == 'C'){
 			return "RUIM";
 		}
 		else{
