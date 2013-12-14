@@ -11,14 +11,14 @@
   <property name="hibernate.hbm2ddl.auto">validate</property>
         
    <!-- <mapping class="br.org.eduqiservice.model.Item"/>  -->
-   <mapping class="br.org.eduqiservice.model.Peso"/>
-   <mapping class="br.org.eduqiservice.model.QuestAluno"/>
-   <mapping class="br.org.eduqiservice.model.QuestDiretor"/>
+   <!-- <mapping class="br.org.eduqiservice.model.Peso"/> -->
+   <!-- <mapping class="br.org.eduqiservice.model.QuestAluno"/> -->
+   <!-- <mapping class="br.org.eduqiservice.model.QuestDiretor"/> -->
    <mapping class="br.org.eduqiservice.model.QuestEscola"/>
    <mapping class="br.org.eduqiservice.model.DadosEscola"/>
-   <mapping class="br.org.eduqiservice.model.ResultadoAluno"/>
+   <!-- <mapping class="br.org.eduqiservice.model.ResultadoAluno"/> -->
    <mapping class="br.org.eduqiservice.model.ResultadoEscola"/>
-   <mapping class="br.org.eduqiservice.model.ResultadoMunicipio"/>
+   <!--  <mapping class="br.org.eduqiservice.model.ResultadoMunicipio"/> -->
    <mapping class="br.org.eduqiservice.model.DescricaoQuestionarioEscola"/>
    <mapping class="br.org.eduqiservice.model.CepEscola"/>
    
