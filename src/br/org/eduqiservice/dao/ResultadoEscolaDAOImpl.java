@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.criterion.Property;
 
-import com.propertiesconfig.util.PropertiesLoader;
+import br.org.eduqiservice.util.PropertiesLoader;
 
 import br.org.eduqiservice.model.ResultadoEscola;
 import br.org.eduqiservice.util.HibernateUtil;
