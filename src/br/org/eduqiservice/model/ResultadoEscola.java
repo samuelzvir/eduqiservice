@@ -2,7 +2,6 @@ package br.org.eduqiservice.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.math.BigInteger;
 import java.math.BigDecimal;
 
 
@@ -31,7 +30,7 @@ public class ResultadoEscola implements Serializable {
 	private int idLocalizacao;
 
 	@Column(name="ID_MUNICIPIO")
-	private BigInteger idMunicipio;
+	private Long idMunicipio;
 
 	@Column(name="ID_PROVA_BRASIL")
 	private int idProvaBrasil;
@@ -49,10 +48,10 @@ public class ResultadoEscola implements Serializable {
 	private BigDecimal mediaMt;
 
 	@Column(name="NU_MATRICULADOS_CENSO")
-	private BigInteger nuMatriculadosCenso;
+	private Long nuMatriculadosCenso;
 
 	@Column(name="NU_PRESENTES")
-	private BigInteger nuPresentes;
+	private Long nuPresentes;
 
 	@Column(name="TAXA_PARTICIPACAO")
 	private BigDecimal taxaParticipacao;
@@ -92,11 +91,11 @@ public class ResultadoEscola implements Serializable {
 		this.idLocalizacao = idLocalizacao;
 	}
 
-	public BigInteger getIdMunicipio() {
+	public Long getIdMunicipio() {
 		return this.idMunicipio;
 	}
 
-	public void setIdMunicipio(BigInteger idMunicipio) {
+	public void setIdMunicipio(Long idMunicipio) {
 		this.idMunicipio = idMunicipio;
 	}
 
@@ -140,19 +139,19 @@ public class ResultadoEscola implements Serializable {
 		this.mediaMt = mediaMt;
 	}
 
-	public BigInteger getNuMatriculadosCenso() {
+	public Long getNuMatriculadosCenso() {
 		return this.nuMatriculadosCenso;
 	}
 
-	public void setNuMatriculadosCenso(BigInteger nuMatriculadosCenso) {
+	public void setNuMatriculadosCenso(Long nuMatriculadosCenso) {
 		this.nuMatriculadosCenso = nuMatriculadosCenso;
 	}
 
-	public BigInteger getNuPresentes() {
+	public Long getNuPresentes() {
 		return this.nuPresentes;
 	}
 
-	public void setNuPresentes(BigInteger nuPresentes) {
+	public void setNuPresentes(Long nuPresentes) {
 		this.nuPresentes = nuPresentes;
 	}
 
