@@ -443,13 +443,13 @@ public class AnswerStats {
 	}
 	
 	private void addNum(char r){
-		if(r == 'a'){
+		if(r == 'a' || r == 'A' ){
 			bom++;
 		}
-		else if(r == 'b'){
+		else if(r == 'b' || r == 'B'){
 			regular++;
 		}
-		else if(r == 'c'){
+		else if(r == 'c' || r == 'C'){
 			ruim++;
 		}
 		else{
