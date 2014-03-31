@@ -12,6 +12,13 @@ EduQI Service é o serviço responsável por disponibilizar todos os dados para 
 Como é um serviço todos os dados utilizados na exibição podem ser consumidos por outros aplicativos através dos
 seguintes endereços:
 
+### Acesse:
+Endereço na WEB: 
+http://eduqi.org
+
+Repositório do Front-end: 
+https://github.com/dcardosods/eduqi
+
 
 ####Servlets da Aplicação:
 - Porcentagem de respostas do questionário socio-econômico das 1000 primeiras escolas:
@@ -33,8 +40,7 @@ http://[host da aplicacao]:[porta]/eduqi-server/questservlet?idEscola=[id da esc
 #### Informações sobre o EduQI-Service
 - Os dados são disponibilizados no formato JSON.
 
-#### Acesse:
-http://eduqi.org/
+
 
 
 
