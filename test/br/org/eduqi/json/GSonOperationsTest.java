@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import br.org.eduqiservice.dao.QuestEscolaDAOImpl;
@@ -12,6 +13,7 @@ import br.org.eduqiservice.model.QuestEscola;
 public class GSonOperationsTest {
 
 	@Test
+	@Ignore
 	public void testBuildGsonObject() {
 		QuestEscolaDAOImpl dao = new QuestEscolaDAOImpl();
 		
