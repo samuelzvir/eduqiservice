@@ -101,7 +101,7 @@ public class InvestmentController {
 			LOG.log(Level.FINE,"parsed.");
 		}
 		else{
-			LOG.log(Level.INFO, "School record not found.");
+			LOG.log(Level.INFO, "School record not found for id="+id);
 			SchoolError  error = new SchoolError(
 					id,"SCHOOL NOT FOUND");
 			result = gson.toJson(error);
