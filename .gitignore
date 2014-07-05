@@ -37,3 +37,10 @@ Icon?
 ehthumbs.db
 Thumbs.db
 /target
+
+# IDEs #
+########
+.project
+.classpath
+.springBeans
+.settings
