@@ -1,4 +1,4 @@
-package org.eduqiservice.core.util;
+package org.eduqi.eduqiservice.core.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;

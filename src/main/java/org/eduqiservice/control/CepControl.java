@@ -1,7 +1,7 @@
 package org.eduqiservice.control;
 
-import org.eduqiservice.core.dao.CepEscolaDAOImpl;
-import org.eduqiservice.core.entity.CepEscola;
+import org.eduqi.eduqiservice.core.dao.CepEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.entity.CepEscola;
 
 public class CepControl {
 

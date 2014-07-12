@@ -5,14 +5,14 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAO;
-import org.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
-import org.eduqiservice.core.dao.QuestEscolaDAOImpl;
-import org.eduqiservice.core.dao.ResultadoEscolaDAOImpl;
-import org.eduqiservice.core.entity.DescricaoQuestionarioEscola;
-import org.eduqiservice.core.entity.QuestEscola;
-import org.eduqiservice.core.entity.ResultadoEscola;
-import org.eduqiservice.core.util.EduqiQuestParser;
+import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAO;
+import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.dao.QuestEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.dao.ResultadoEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.entity.DescricaoQuestionarioEscola;
+import org.eduqi.eduqiservice.core.entity.QuestEscola;
+import org.eduqi.eduqiservice.core.entity.ResultadoEscola;
+import org.eduqi.eduqiservice.core.util.EduqiQuestParser;
 import org.eduqiservice.domain.QuestStatistics;
 import org.eduqiservice.domain.SchoolError;
 

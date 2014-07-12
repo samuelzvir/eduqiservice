@@ -7,8 +7,8 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import org.apache.log4j.Logger;
+import org.eduqi.eduqiservice.core.util.EduqiPropertiesLoader;
 import org.eduqiservice.control.CacheSearchController;
-import org.eduqiservice.core.util.EduqiPropertiesLoader;
 import org.eduqiservice.thread.ProbThread;
 
 /**

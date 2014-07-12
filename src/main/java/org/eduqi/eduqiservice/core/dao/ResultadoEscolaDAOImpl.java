@@ -1,12 +1,12 @@
-package org.eduqiservice.core.dao;
+package org.eduqi.eduqiservice.core.dao;
 
 import java.io.IOException;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.eduqiservice.core.entity.ResultadoEscola;
-import org.eduqiservice.core.util.EduqiHibernateUtil;
-import org.eduqiservice.core.util.EduqiPropertiesLoader;
+import org.eduqi.eduqiservice.core.entity.ResultadoEscola;
+import org.eduqi.eduqiservice.core.util.EduqiHibernateUtil;
+import org.eduqi.eduqiservice.core.util.EduqiPropertiesLoader;
 import org.hibernate.Session;
 import org.hibernate.criterion.Property;
 

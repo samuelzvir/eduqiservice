@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.entity.DescricaoQuestionarioEscola;
+import org.eduqi.eduqiservice.core.entity.QuestEscola;
 import org.eduqiservice.control.InvestmentController;
-import org.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
-import org.eduqiservice.core.entity.DescricaoQuestionarioEscola;
-import org.eduqiservice.core.entity.QuestEscola;
 
 public class AnswerStats {
 

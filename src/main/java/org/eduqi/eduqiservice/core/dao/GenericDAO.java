@@ -1,4 +1,4 @@
-package org.eduqiservice.core.dao;
+package org.eduqi.eduqiservice.core.dao;
 
 import java.io.Serializable;
 import java.util.List;

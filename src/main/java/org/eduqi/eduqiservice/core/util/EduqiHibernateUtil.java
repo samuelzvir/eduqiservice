@@ -1,4 +1,4 @@
-package org.eduqiservice.core.util;
+package org.eduqi.eduqiservice.core.util;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
@@ -22,7 +22,7 @@ public class EduqiHibernateUtil {
 	static {
 		try {
 			 
-			Configuration cfg = new Configuration().configure("org/eduqiservice/connection/hibernate.cfg.xml");         
+			Configuration cfg = new Configuration().configure("org/eduqi/eduqiservice/core/connection/hibernate.cfg.xml");         
 			StandardServiceRegistryBuilder sb = new StandardServiceRegistryBuilder();
 			sb.applySettings(cfg.getProperties());
 			StandardServiceRegistry standardServiceRegistry = sb.build();                   

@@ -1,4 +1,4 @@
-package org.eduqiservice.core.entity;
+package org.eduqi.eduqiservice.core.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -3,9 +3,9 @@ package org.eduqiservice.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eduqiservice.core.dao.DadosEscolaDAO;
-import org.eduqiservice.core.dao.DadosEscolaDAOImpl;
-import org.eduqiservice.core.entity.DadosEscola;
+import org.eduqi.eduqiservice.core.dao.DadosEscolaDAO;
+import org.eduqi.eduqiservice.core.dao.DadosEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.entity.DadosEscola;
 import org.eduqiservice.domain.CacheSearch;
 
 public class CacheSearchBusiness {

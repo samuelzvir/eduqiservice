@@ -1,11 +1,11 @@
-package org.eduqiservice.core.dao;
+package org.eduqi.eduqiservice.core.dao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.eduqiservice.core.util.EduqiHibernateUtil;
+import org.eduqi.eduqiservice.core.util.EduqiHibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

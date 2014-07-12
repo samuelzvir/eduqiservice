@@ -1,6 +1,6 @@
-package org.eduqiservice.core.dao;
+package org.eduqi.eduqiservice.core.dao;
 
-import org.eduqiservice.core.entity.QuestEscola;
+import org.eduqi.eduqiservice.core.entity.QuestEscola;
 
 public class QuestEscolaDAOImpl extends HibernateGenericDAO<QuestEscola> implements GenericDAO<QuestEscola>{
 

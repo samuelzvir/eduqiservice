@@ -1,6 +1,6 @@
-package org.eduqiservice.core.dao;
+package org.eduqi.eduqiservice.core.dao;
 
-import org.eduqiservice.core.entity.CepEscola;
+import org.eduqi.eduqiservice.core.entity.CepEscola;
 
 public class CepEscolaDAOImpl extends HibernateGenericDAO<CepEscola> implements GenericDAO<CepEscola> {
 
