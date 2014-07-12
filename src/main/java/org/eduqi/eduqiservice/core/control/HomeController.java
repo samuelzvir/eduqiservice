@@ -1,4 +1,4 @@
-package org.eduqi.eduqiservice;
+package org.eduqi.eduqiservice.core.control;
 
 import java.util.Locale;
 
@@ -15,14 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(HomeController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {	
+	public String home(Locale locale, Model model) {
+		LOG.info("Eduqi Home");
 		return "home";
 	}
-	
 }
