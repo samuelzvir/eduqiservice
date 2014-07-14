@@ -1,10 +1,9 @@
-package org.eduqiservice.control;
+package org.eduqi.eduqiservice.core.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
+import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAO;
 import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
 import org.eduqi.eduqiservice.core.dao.QuestEscolaDAOImpl;
@@ -18,10 +17,10 @@ import org.eduqiservice.domain.SchoolError;
 
 import com.google.gson.Gson;
 
-public class InvestmentController {
-
-	private static final Logger LOG = Logger.getLogger(InvestmentController.class.getName());
-
+public class EduqiSchoolServiceImpl implements EduqiSchoolService{
+	
+	private static final Logger LOG = Logger.getLogger(EduqiEscolaCEPServiceImpl.class);
+	
 	public static String giveSchoolStatistics(int id){
 		Gson gson = new Gson();
 		String result = "";
@@ -34,7 +33,7 @@ public class InvestmentController {
 		QuestEscola questResult = escolaDAO.findById(id);
 
 		if(questResult != null){
-			LOG.log(Level.FINE, "adding info to build JSON ... ");
+			LOG.debug("adding info to build JSON ... ");
 			qe.setQuest7(new String[]{descQuest.get(0).getDescricaoPergunta(),EduqiQuestParser.matchString(questResult.getTxRespQ007())});
 			qe.setQuest8(new String[]{descQuest.get(1).getDescricaoPergunta(),EduqiQuestParser.matchString(questResult.getTxRespQ008())});
 			qe.setQuest9(new String[]{descQuest.get(2).getDescricaoPergunta(),EduqiQuestParser.matchString(questResult.getTxRespQ009())});
@@ -95,20 +94,20 @@ public class InvestmentController {
 			qe.setQuest64(new String[]{descQuest.get(57).getDescricaoPergunta(),EduqiQuestParser.matchString(questResult.getTxRespQ064())});
 			qe.setQuest65(new String[]{descQuest.get(58).getDescricaoPergunta(),EduqiQuestParser.matchString(questResult.getTxRespQ065())});
 			qe.setQuest66(new String[]{descQuest.get(59).getDescricaoPergunta(),EduqiQuestParser.matchString(questResult.getTxRespQ066())});
-			LOG.log(Level.FINE, "Info added. ");
-			LOG.log(Level.FINE,"parsing to JSON");
+			LOG.debug("Info added. ");
+			LOG.debug("parsing to JSON");
 			result = gson.toJson(qe);
-			LOG.log(Level.FINE,"parsed.");
+			LOG.debug("parsed.");
 		}
 		else{
-			LOG.log(Level.INFO, "School record not found for id="+id);
+			LOG.info("School record not found for id="+id);
 			SchoolError  error = new SchoolError(
 					id,"SCHOOL NOT FOUND");
 			result = gson.toJson(error);
 		}
 		return result;
 	}
-
+	
 	public static List<QuestEscola> buildProb(){
 		ResultadoEscolaDAOImpl escolaDAOImpl = new ResultadoEscolaDAOImpl();
 		List<ResultadoEscola> mt = escolaDAOImpl.getMilPrimeirosMat();
@@ -132,4 +131,5 @@ public class InvestmentController {
 		//utiliza dos valores coletados
 		return questEscola;	
 	}
+	
 }

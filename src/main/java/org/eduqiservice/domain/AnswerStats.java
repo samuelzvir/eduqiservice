@@ -8,7 +8,7 @@ import java.util.Map;
 import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
 import org.eduqi.eduqiservice.core.entity.DescricaoQuestionarioEscola;
 import org.eduqi.eduqiservice.core.entity.QuestEscola;
-import org.eduqiservice.control.InvestmentController;
+import org.eduqi.eduqiservice.core.service.EduqiSchoolServiceImpl;
 
 public class AnswerStats {
 
@@ -33,7 +33,7 @@ public class AnswerStats {
 	public void buildProAnswers(){
 	
 		
-		List<QuestEscola> data = InvestmentController.buildProb();
+		List<QuestEscola> data = EduqiSchoolServiceImpl.buildProb();
 		
 		for (QuestEscola questEscola : data) {
 			char r = questEscola.getTxRespQ007();

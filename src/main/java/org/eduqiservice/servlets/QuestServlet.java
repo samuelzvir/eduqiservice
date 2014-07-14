@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.eduqiservice.control.InvestmentController;
+import org.eduqi.eduqiservice.core.service.EduqiSchoolServiceImpl;
 
 /**
  * Servlet implementation class QuestServlet
@@ -22,7 +22,6 @@ public class QuestServlet extends HttpServlet {
      */
     public QuestServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -38,7 +37,7 @@ public class QuestServlet extends HttpServlet {
 		 log.info("Pesquisando escola: id="+ id+" .");
 		
 		String jsonCallbackParam = request.getParameter("callback");
-		String result = InvestmentController.giveSchoolStatistics(id);
+		String result = EduqiSchoolServiceImpl.giveSchoolStatistics(id);
 		
 		if(jsonCallbackParam != null){
 			result =jsonCallbackParam+"(" + result+")";
@@ -46,9 +45,7 @@ public class QuestServlet extends HttpServlet {
 		if(result != null){
 			response.getWriter().write(result);
 			response.flushBuffer();
-			
 		}
-
 	}
 
 }
