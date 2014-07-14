@@ -1,7 +1,10 @@
 package org.eduqi.eduqiservice.rest.control;
 
-public class EduqiSchoolRequestImpl implements EduqiSchoolRequest{
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-	
+@Controller
+@RequestMapping("/v1/")
+public class EduqiSchoolRequestImpl implements EduqiSchoolRequest{
 	
 }
