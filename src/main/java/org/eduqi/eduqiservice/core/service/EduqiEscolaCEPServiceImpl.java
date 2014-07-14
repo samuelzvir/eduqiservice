@@ -18,7 +18,7 @@ public class EduqiEscolaCEPServiceImpl implements EduqiEscolaCEPService{
 	public String getCEP(int idEscola){
 		CepEscola cep = cepEscolaDAO.findById(idEscola);
 		if(cep == null){
-			LOG.info("CEP not found.");
+			LOG.info("CEP not found. for ID = "+ idEscola);
 			return "";
 		}
 		LOG.info("Returning CEP "+cep.getNumCep());
