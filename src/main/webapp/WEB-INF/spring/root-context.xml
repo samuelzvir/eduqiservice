@@ -13,16 +13,6 @@
 	<bean id="eduqischoolrequest" class="org.eduqi.eduqiservice.rest.control.EduqiSchoolRequestImpl"/>
 
 	<!-- Services -->
-	<bean id="eduqiescolacepservice" class="org.eduqi.eduqiservice.core.service.EduqiEscolaCEPServiceImpl" >
-		<constructor-arg ref="cepescoladao"/>
-	</bean>
-	
+	<bean id="eduqiescolacepservice" class="org.eduqi.eduqiservice.core.service.EduqiEscolaCEPServiceImpl" />
 
-	<!-- DAOs -->
-	<bean id="cepescoladao" class="org.eduqi.eduqiservice.core.dao.CepEscolaDAOImpl" />
-	<bean id="dadosescoladao" class="org.eduqi.eduqiservice.core.dao.DadosEscolaDAOImpl" />
-	<bean id="descricaoquestionarioescoladao" class="org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl" />
-	<bean id="questescoladao" class="org.eduqi.eduqiservice.core.dao.QuestEscolaDAOImpl" />
-	<bean id="resultadoescoladao" class="org.eduqi.eduqiservice.core.dao.ResultadoEscolaDAOImpl" />
-	
 </beans>

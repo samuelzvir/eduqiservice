@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/v1/")
@@ -21,10 +22,11 @@ public class EduqiCepRequestImpl implements EduqiCepRequest{
 	public EduqiCepRequestImpl(EduqiEscolaCEPService cepService) {
 		this.cepService = cepService;
 	}
+	public EduqiCepRequestImpl(){}
 
 	@RequestMapping(value ="/getcep/{idEscola}", method = RequestMethod.GET,
 			headers="Accept=application/xml, application/json")
-	public CEP getCEP(@PathVariable String idEscola) {
+	public @ResponseBody CEP getCEP(@PathVariable String idEscola) {
 		CEP cep = new CEP();
 		if(idEscola != null){
 			int id = Integer.parseInt(idEscola);
