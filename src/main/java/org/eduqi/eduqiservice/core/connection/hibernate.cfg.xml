@@ -8,7 +8,7 @@
 		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.jdbc.batch_size">0</property>
-		<property name="hibernate.hbm2ddl.auto">validate</property>
+<!-- 		<property name="hibernate.hbm2ddl.auto">validate</property> -->
 
 		<mapping class="org.eduqi.eduqiservice.core.entity.QuestEscola" />
 		<mapping class="org.eduqi.eduqiservice.core.entity.DadosEscola" />

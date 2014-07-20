@@ -1,5 +1,6 @@
 package org.eduqi.eduqiservice.rest.control;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.domain.CEP;
 import org.eduqi.eduqiservice.core.service.EduqiEscolaCEPService;
@@ -29,8 +30,15 @@ public class EduqiCepRequestImpl implements EduqiCepRequest{
 	public @ResponseBody CEP getCEP(@PathVariable String idEscola) {
 		CEP cep = new CEP();
 		if(idEscola != null){
-			int id = Integer.parseInt(idEscola);
-			String number = cepService.getCEP(id);
+			int id = 0;
+			String number = "";
+			try{
+				id = Integer.parseInt(idEscola);
+				number = cepService.getCEP(id);
+			}catch(NumberFormatException e){
+				LOG.log(Level.WARN, "Invalid input: "+idEscola);
+				number = "Invalid Input, Must be a number.";
+			}
 			cep.setCodigo(number);
 		}else{
 			LOG.warn("Null Id. Application will respond with an empty CEP");

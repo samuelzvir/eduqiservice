@@ -1,9 +1,9 @@
 package org.eduqi.eduqiservice.rest.control;
 
-import org.eduqi.eduqiservice.core.domain.CEP;
+import org.eduqi.eduqiservice.core.domain.SchoolNameList;
 
 public interface EduqiTypeaheadRequest {
 	
-	CEP teste();
+	SchoolNameList getSchoolname(String query);
 
 }

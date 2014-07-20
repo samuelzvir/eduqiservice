@@ -1,10 +1,13 @@
 package org.eduqi.eduqiservice.rest.control;
 
 import org.eduqi.eduqiservice.core.control.HomeController;
-import org.eduqi.eduqiservice.core.domain.CEP;
+import org.eduqi.eduqiservice.core.domain.SchoolNameList;
+import org.eduqi.eduqiservice.core.service.EduqiTypeaheadServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,11 +18,28 @@ public class EduqiTypeaheadRequestImpl implements EduqiTypeaheadRequest {
 
 	private static final Logger LOG = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value ="/teste", method = RequestMethod.GET,
+	@Autowired
+	private EduqiTypeaheadServiceImpl eduqiTypeaheadService;
+
+	public EduqiTypeaheadRequestImpl(
+			EduqiTypeaheadServiceImpl eduqiTypeaheadService) {
+		super();
+		this.eduqiTypeaheadService = eduqiTypeaheadService;
+	}
+	public EduqiTypeaheadRequestImpl(){}
+
+	@RequestMapping(value ="/schoolname/{query}", method = RequestMethod.GET,
 			headers="Accept=application/xml, application/json")
-	public @ResponseBody CEP teste() { 
-		LOG.info("teste");
-		CEP cep = new CEP("teste");
-		return cep;
+	public @ResponseBody SchoolNameList getSchoolname(@PathVariable String query) { 
+		LOG.info("Getting school name(s)");
+		LOG.info("Querying for "+ query);
+		int userInt = 10;
+		String terms[] = query.split("\\s+");
+		if(terms != null){
+			userInt = terms.length;
+		}
+		SchoolNameList result = eduqiTypeaheadService.search(userInt, terms);	
+		LOG.info("Returning "+ result.getSchoolNames().size() + " name(s)");
+		return result;
 	}
 }
