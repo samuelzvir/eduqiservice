@@ -33,12 +33,8 @@ public class EduqiTypeaheadRequestImpl implements EduqiTypeaheadRequest {
 	public @ResponseBody SchoolNameList getSchoolname(@PathVariable String query) { 
 		LOG.info("Getting school name(s)");
 		LOG.info("Querying for "+ query);
-		int userInt = 10;
 		String terms[] = query.split("\\s+");
-		if(terms != null){
-			userInt = terms.length;
-		}
-		SchoolNameList result = eduqiTypeaheadService.search(userInt, terms);	
+		SchoolNameList result = eduqiTypeaheadService.search(1000, terms);	
 		LOG.info("Returning "+ result.getSchoolNames().size() + " name(s)");
 		return result;
 	}
