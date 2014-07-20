@@ -156,7 +156,11 @@
 			<artifactId>jackson-jaxrs</artifactId>
 			<version>1.9.13</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.sna-projects.cleo</groupId>
+			<artifactId>cleo</artifactId>
+			<version>1.2.6</version>
+		</dependency>
 		<!-- JSON -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
