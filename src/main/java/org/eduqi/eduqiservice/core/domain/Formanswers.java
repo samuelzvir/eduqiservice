@@ -1,6 +1,9 @@
-package org.eduqiservice.domain;
+package org.eduqi.eduqiservice.core.domain;
 
-public class QuestStatistics {
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="answers")
+public class Formanswers {
 
 	private String quest7[];
 	private String quest8[];

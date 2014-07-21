@@ -34,7 +34,7 @@ public class AnswerStats {
 	}
 
 	public void buildAnswersStat(){
-		List<QuestEscola> data = EduqiSchoolServiceImpl.buildProb();
+		List<QuestEscola> data = EduqiSchoolServiceImpl.buildStat();
 		
 		for (QuestEscola questEscola : data) {
 			char r = questEscola.getTxRespQ007();
