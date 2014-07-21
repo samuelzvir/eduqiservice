@@ -15,14 +15,12 @@
 <br/>
 CEP:  	http://{host}:{port}/eduqiservice/v1/getcep/{idEscola}
 <br/>
-Stats:   http://{host}:{port}/eduqiservice/v1/getaveragestats<br/>
-		http://{host}:{port}/eduqiservice/v1/getpmathstats<br/>
-		http://{host}:{port}/eduqiservice/v1/getportuguesestats<br/>
-<br/><br/>	
-School Stats:  http://{host}:{port}/eduqiservice/v1/getinfrastatus/{idEscola}
-<br/><br/>
+Stats:   http://{host}:{port}/eduqiservice/v1/schoolanswers/{schoolID}<br/>
+		http://{host}:{port}/eduqiservice/v1/generalstats<br/>
+		
+<br/>
 
-Type ahead:  http://{host}:{port}/eduqiservice/v1/getshoolname/{term}			   		   
+Typeahead:  http://{host}:{port}/eduqiservice/v1/eduqiservice/v1/schoolname/{query}			   		   
 
 <br/><br/>
 
