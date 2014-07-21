@@ -5,7 +5,7 @@ import javax.sql.DataSource;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.exception.TypeaheadStartException;
-import org.eduqiservice.domain.AnswerStats;
+import org.eduqi.eduqiservice.core.domain.AnswerStats;
 import org.springframework.beans.factory.annotation.Autowired;
 
 

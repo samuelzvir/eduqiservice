@@ -1,25 +1,26 @@
 package org.eduqi.eduqiservice.core.dao;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.entity.ResultadoEscola;
 import org.eduqi.eduqiservice.core.util.EduqiHibernateUtil;
-import org.eduqi.eduqiservice.core.util.EduqiPropertiesLoader;
+//import org.eduqi.eduqiservice.core.util.EduqiPropertiesLoader;
 import org.hibernate.Session;
 import org.hibernate.criterion.Property;
 
 public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola> implements ResultadoEscolaDAO {
 
 	
-	private static Logger log = Logger.getLogger(ResultadoEscolaDAOImpl.class);
+	private static final Logger LOG = Logger.getLogger(ResultadoEscolaDAOImpl.class);
 	
 	/**
 	 * Retorna as N escolas com notas mais altas em MT
 	 * @return
 	 */
 	public List<ResultadoEscola> getMilPrimeirosMat(){
+		LOG.info("Getting Math results ...");
 		Session session = EduqiHibernateUtil.getInstance();
 		
 		int number = 1000;

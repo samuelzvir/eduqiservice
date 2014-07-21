@@ -1,4 +1,4 @@
-package org.eduqiservice.domain;
+package org.eduqi.eduqiservice.core.domain;
 
 import java.util.ArrayList;
 import java.util.HashMap;

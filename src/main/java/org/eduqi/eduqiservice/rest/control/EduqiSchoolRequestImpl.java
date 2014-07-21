@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.domain.AnswerResults;
 import org.eduqi.eduqiservice.core.domain.Formanswers;
 import org.eduqi.eduqiservice.core.service.EduqiSchoolServiceImpl;
-import org.eduqiservice.domain.AnswerStats;
+import org.eduqi.eduqiservice.core.domain.AnswerStats;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
