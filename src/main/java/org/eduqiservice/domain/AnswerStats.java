@@ -5,11 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.domain.AnswerResult;
 import org.eduqi.eduqiservice.core.entity.DescricaoQuestionarioEscola;
 import org.eduqi.eduqiservice.core.entity.QuestEscola;
 import org.eduqi.eduqiservice.core.service.EduqiSchoolServiceImpl;
 
+@XmlRootElement
 public class AnswerStats {
 
 	int bom;
@@ -17,22 +21,19 @@ public class AnswerStats {
 	int ruim;
 	int inexistente;
 	
-	
-	private static List<AnswersTypes> probAnswers = new ArrayList<AnswersTypes>();
+	private static List<AnswerResult> statAnswers = new ArrayList<AnswerResult>();
 	
 	private static Map<Integer,DescricaoQuestionarioEscola> descricaoQuestionarioEscola;
 	
-	public static List<AnswersTypes> getProbAnswers() {
-		return probAnswers;
+	public static List<AnswerResult> getAverageAnswers() {
+		return statAnswers;
 	}
 
-	public static void setProbAnswers(List<AnswersTypes> probAnswers) {
-		AnswerStats.probAnswers = probAnswers;
+	public static void setProbAnswers(List<AnswerResult> probAnswers) {
+		AnswerStats.statAnswers = probAnswers;
 	}
 
-	public void buildProAnswers(){
-	
-		
+	public void buildAnswersStat(){
 		List<QuestEscola> data = EduqiSchoolServiceImpl.buildProb();
 		
 		for (QuestEscola questEscola : data) {
@@ -473,11 +474,11 @@ public class AnswerStats {
 	}
 	
 	private void getProbAnswers(int size, int idQuest){
-		AnswersTypes prob = new AnswersTypes();
-		prob.setBom(calcProp(size, bom));
-		prob.setRegular(calcProp(size, regular));
-		prob.setRuim(calcProp(size, ruim));
-		prob.setInexistente(calcProp(size, inexistente));
+		AnswerResult stat = new AnswerResult();
+		stat.setBom(calcProp(size, bom));
+		stat.setRegular(calcProp(size, regular));
+		stat.setRuim(calcProp(size, ruim));
+		stat.setInexistente(calcProp(size, inexistente));
 		
 		if(descricaoQuestionarioEscola == null){
 			descricaoQuestionarioEscola = new HashMap<Integer,DescricaoQuestionarioEscola>();
@@ -490,9 +491,7 @@ public class AnswerStats {
 			}
 		}
 		DescricaoQuestionarioEscola quest = descricaoQuestionarioEscola.get(idQuest);		
-		prob.setQuestion(quest.getDescricaoPergunta());
-		probAnswers.add(prob);
-		
+		stat.setQuestion(quest.getDescricaoPergunta());
+		statAnswers.add(stat);
 	}
-	
 }

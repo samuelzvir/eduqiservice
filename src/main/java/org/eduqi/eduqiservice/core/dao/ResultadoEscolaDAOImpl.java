@@ -22,15 +22,15 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	public List<ResultadoEscola> getMilPrimeirosMat(){
 		Session session = EduqiHibernateUtil.getInstance();
 		
-		int number = 0;
-		try {
-				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-alta-mt") );
-		
-		} catch (NumberFormatException e) {
-			log.error(e,e);
-		} catch (IOException e) {
-			log.error(e,e);
-		}
+		int number = 1000;
+//		try {
+//				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-alta-mt") );
+//		
+//		} catch (NumberFormatException e) {
+//			log.error(e,e);
+//		} catch (IOException e) {
+//			log.error(e,e);
+//		}
 	
 	
 		@SuppressWarnings("unchecked")
@@ -48,16 +48,16 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	public List<ResultadoEscola> getMilPrimeirosLp(){
 		Session session = EduqiHibernateUtil.getInstance();
 		
-		int number = 0;
-		try {
-				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-alta-lp") );
+		int number = 1000;
+//		try {
+//			number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-alta-lp") );
+//			
+//		} catch (NumberFormatException e) {
+//			log.error(e,e);
+//		} catch (IOException e) {
+//			log.error(e,e);
+//		}
 		
-		} catch (NumberFormatException e) {
-			log.error(e,e);
-		} catch (IOException e) {
-			log.error(e,e);
-		}
-	
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").desc()).setMaxResults(number).list();
 			session.close();
@@ -72,15 +72,15 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	public List<ResultadoEscola> getMilUltimosMt(){
 		Session session = EduqiHibernateUtil.getInstance();
 		
-		int number = 0;
-		try {
-				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-baixa-mt") );
-		
-		} catch (NumberFormatException e) {
-			log.error(e,e);
-		} catch (IOException e) {
-			log.error(e,e);
-		}
+		int number = 1000;
+//		try {
+//				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-baixa-mt") );
+//		
+//		} catch (NumberFormatException e) {
+//			log.error(e,e);
+//		} catch (IOException e) {
+//			log.error(e,e);
+//		}
 		
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaMt").asc()).setMaxResults(number).list();
@@ -96,15 +96,15 @@ public class ResultadoEscolaDAOImpl extends HibernateGenericDAO<ResultadoEscola>
 	public List<ResultadoEscola> getMilUltimosLp(){
 		Session session = EduqiHibernateUtil.getInstance();
 	
-		int number = 0;
-		try {
-				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-baixa-lp") );
-		
-		} catch (NumberFormatException e) {
-			log.error(e,e);
-		} catch (IOException e) {
-			log.error(e,e);
-		}
+		int number = 1000;
+//		try {
+//				number =Integer.parseInt( EduqiPropertiesLoader.getProps().getProperty("numero-escolas-media-baixa-lp") );
+//		
+//		} catch (NumberFormatException e) {
+//			log.error(e,e);
+//		} catch (IOException e) {
+//			log.error(e,e);
+//		}
 		
 		@SuppressWarnings("unchecked")
 		List<ResultadoEscola> escolas = session.createCriteria(ResultadoEscola.class).addOrder(Property.forName("mediaLp").asc()).setMaxResults(number).list();

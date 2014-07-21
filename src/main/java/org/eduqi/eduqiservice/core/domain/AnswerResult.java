@@ -1,6 +1,9 @@
-package org.eduqiservice.domain;
+package org.eduqi.eduqiservice.core.domain;
 
-public class AnswersTypes {
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="result")
+public class AnswerResult {
 
 	private String question;
 	private double bom;
