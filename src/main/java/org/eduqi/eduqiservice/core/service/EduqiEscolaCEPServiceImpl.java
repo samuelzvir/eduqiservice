@@ -15,10 +15,10 @@ public class EduqiEscolaCEPServiceImpl implements EduqiEscolaCEPService{
 		this.cepEscolaDAO = new CepEscolaDAOImpl();
 	}
 	
-	public String getCEP(int idEscola){
-		CepEscola cep = cepEscolaDAO.findById(idEscola);
+	public String getCEP(int schoolID){
+		CepEscola cep = cepEscolaDAO.findById(schoolID);
 		if(cep == null){
-			LOG.info("CEP not found. for ID = "+ idEscola);
+			LOG.info("CEP not found. for ID = "+ schoolID);
 			return "";
 		}
 		LOG.info("Returning CEP "+cep.getNumCep());

@@ -25,18 +25,18 @@ public class EduqiCepRequestImpl implements EduqiCepRequest{
 	}
 	public EduqiCepRequestImpl(){}
 
-	@RequestMapping(value ="/getcep/{idEscola}", method = RequestMethod.GET,
+	@RequestMapping(value ="/getcep/{schoolID}", method = RequestMethod.GET,
 			headers="Accept=application/xml, application/json")
-	public @ResponseBody CEP getCEP(@PathVariable String idEscola) {
+	public @ResponseBody CEP getCEP(@PathVariable String schoolID) {
 		CEP cep = new CEP();
-		if(idEscola != null){
+		if(schoolID != null){
 			int id = 0;
 			String number = "";
 			try{
-				id = Integer.parseInt(idEscola);
+				id = Integer.parseInt(schoolID);
 				number = cepService.getCEP(id);
 			}catch(NumberFormatException e){
-				LOG.log(Level.WARN, "Invalid input: "+idEscola);
+				LOG.log(Level.WARN, "Invalid input: "+schoolID);
 				number = "Invalid Input, Must be a number.";
 			}
 			cep.setCodigo(number);
