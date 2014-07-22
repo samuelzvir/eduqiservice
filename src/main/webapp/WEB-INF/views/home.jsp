@@ -9,14 +9,14 @@
 	<br /> #Eduqi Service calls:
 	<br />
 	<br /> CEP:
-	<br /> http://{host}:{port}/eduqiservice/v1/getcep/{idEscola}
+	<br /> http://{host}:{port}/eduqiservice/v1/getcep/{shoolID}
 	<br />
 	<br /> STATS:
 	<br /> http://{host}:{port}/eduqiservice/v1/schoolanswers/{schoolID}
 	<br /> http://{host}:{port}/eduqiservice/v1/generalstats
 	<br />
 	<br /> TYPEAHEAD:
-	<br />http://{host}:{port}/eduqiservice/v1/eduqiservice/v1/schoolname/{query}/{limit}
+	<br />http://{host}:{port}/eduqiservice/v1/schoolname/{query}/{limit}
 	<br />
 	
 </body>
