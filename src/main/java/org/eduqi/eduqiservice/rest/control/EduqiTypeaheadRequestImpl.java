@@ -28,21 +28,21 @@ public class EduqiTypeaheadRequestImpl implements EduqiTypeaheadRequest {
 	}
 	public EduqiTypeaheadRequestImpl(){}
 
-	@RequestMapping(value ="/schoolname/{query}", method = RequestMethod.GET,
+	@RequestMapping(value ="/schoolname/{query}/{limit}", method = RequestMethod.GET,
 			headers="Accept=application/xml, application/json")
-	public @ResponseBody SchoolNameList getSchoolname(@PathVariable String query) { 
-		LOG.info("Getting school name(s)");
-		LOG.info("Querying for "+ query);
+	public @ResponseBody SchoolNameList getSchoolname(@PathVariable String query, @PathVariable int limit) { 
+		LOG.info("Getting school name(s)...");
+		LOG.info("Querying for "+ query + " with limit of = "+ limit + " elements.");
 		SchoolNameList result = null;
 		if(query != null){
 			query = query.toUpperCase();
 			String terms[] = query.split("\\s+");
-			result = eduqiTypeaheadService.search(1000, terms);	
+			result = eduqiTypeaheadService.search(1000,limit, terms);	
 		}else{
 			LOG.warn("Invalid Query.");
 			result = new SchoolNameList();
 		}
-		LOG.info("Returning "+ result.getSchoolNames().size() + " name(s)");
+		LOG.info("Returning "+ result.getSchoolNames().size() + " name(s).");
 		return result;
 	}
 }

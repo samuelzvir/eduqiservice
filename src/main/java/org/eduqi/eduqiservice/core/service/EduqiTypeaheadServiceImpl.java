@@ -14,10 +14,10 @@ import org.eduqi.eduqiservice.core.domain.SchoolNameList;
 import org.eduqi.eduqiservice.core.entity.DadosEscola;
 
 public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
-	
+
 	private static EduQIGenericTypeaheadInstance<EduQIElement> instance;
 	private static final Logger LOG = Logger.getLogger(EduqiTypeaheadServiceImpl.class);
-	
+
 	@Override
 	public List<SchoolName> searchSchoolName(String query) {
 		return null;
@@ -28,11 +28,11 @@ public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
 		if(instance == null){
 			instance = new EduQIGenericTypeaheadInstance<EduQIElement>("eduqitypeahead", getFile());
 		}
-		
+
 		LOG.info("starting indexation ...");
 		DadosEscolaDAO resultadoEscolaDAO = new DadosEscolaDAOImpl();
 		List<DadosEscola> tempEscolaResult = resultadoEscolaDAO.listAll();
-		
+
 		for (int i = 0 ;i < tempEscolaResult.size(); i++) {
 			DadosEscola dadosEscola = tempEscolaResult.get(i);
 			EduQIElement element = new EduQIElement();
@@ -40,7 +40,7 @@ public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
 			element.setSchoolId(dadosEscola.getIdEscola());
 			element.setSchoolName(dadosEscola.getNomeEscola());
 			element.setTerms(dadosEscola.getNomeEscola().split("\\s+"));
-			
+
 			if(instance.getIndexer().index(element)){
 				LOG.debug("Indexing "+ dadosEscola.getNomeEscola());
 			}else{
@@ -49,7 +49,7 @@ public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
 		}
 		LOG.info("indexation finished ...");
 	}
-	
+
 	private File getFile(){
 		URL url = getClass().getResource("/config");
 		return new File(url.getPath());
@@ -58,13 +58,22 @@ public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
 	public EduQIGenericTypeaheadInstance<EduQIElement> getInstance() {
 		return instance;
 	}
-	
-	public SchoolNameList search(int number, String[] terms){
+
+	public SchoolNameList search(int number,int limit, String[] terms){
 		List<SchoolName> result = new ArrayList<SchoolName>();
 		List<EduQIElement> elements = instance.getSearcher().search(number, terms);
-		
-		for (EduQIElement eduQIElement : elements) {
-			result.add(new SchoolName(eduQIElement.getSchoolId(), eduQIElement.getSchoolName()));
+		if(limit == 0){
+			for (EduQIElement eduQIElement : elements) {
+				result.add(new SchoolName(eduQIElement.getSchoolId(), eduQIElement.getSchoolName()));
+			}
+		}else{
+			for (int i = 0; i < elements.size(); i++) {
+				if(i == limit ){
+					break;
+				}
+				EduQIElement eduQIElement = elements.get(i);
+				result.add(new SchoolName(eduQIElement.getSchoolId(), eduQIElement.getSchoolName()));
+			}
 		}
 		return new SchoolNameList(result);
 	}

@@ -4,6 +4,6 @@ import org.eduqi.eduqiservice.core.domain.SchoolNameList;
 
 public interface EduqiTypeaheadRequest {
 	
-	SchoolNameList getSchoolname(String query);
+	SchoolNameList getSchoolname(String query, int limit);
 
 }
