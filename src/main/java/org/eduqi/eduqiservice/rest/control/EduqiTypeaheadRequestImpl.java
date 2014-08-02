@@ -29,7 +29,7 @@ public class EduqiTypeaheadRequestImpl implements EduqiTypeaheadRequest {
 	public EduqiTypeaheadRequestImpl(){}
 
 	@RequestMapping(value ="/schoolname/{query}/{limit}", method = RequestMethod.GET,
-			headers="Accept=application/xml, application/json")
+			headers="Accept=application/json,application/xml")
 	public @ResponseBody SchoolNameList getSchoolname(@PathVariable String query, @PathVariable int limit) { 
 		LOG.info("Getting school name(s)...");
 		LOG.info("Querying for "+ query + " with limit of = "+ limit + " elements.");
