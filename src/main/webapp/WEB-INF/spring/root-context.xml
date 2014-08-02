@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<bean id="eduqitypeaheadrequest" class="org.eduqi.eduqiservice.rest.control.EduqiTypeaheadRequestImpl" >
+		<constructor-arg ref="eduqitypeaheadservice" />
+	</bean>
+	<bean id="eduqiceprequest" class="org.eduqi.eduqiservice.rest.control.EduqiCepRequestImpl">
+		<constructor-arg ref="eduqiescolacepservice" />
+	</bean>
+	<bean id="eduqistatrequest"
+		class="org.eduqi.eduqiservice.rest.control.EduqiStatRequestImpl" />
+	<bean id="eduqischoolrequest"
+		class="org.eduqi.eduqiservice.rest.control.EduqiSchoolRequestImpl" />
+
+	<!-- Services -->
+	<bean id="eduqiescolacepservice"	class="org.eduqi.eduqiservice.core.service.EduqiEscolaCEPServiceImpl" />
+	
+	<bean id="eduqiinitservices" class="org.eduqi.eduqiservice.core.service.EduqiInitServices" init-method="startAll">
+		<constructor-arg ref="eduqitypeaheadservice" />
+		<constructor-arg ref="eduqiDataSource" />
+	</bean>
+	<bean id="eduqitypeaheadservice"  class="org.eduqi.eduqiservice.core.service.EduqiTypeaheadServiceImpl"/>
+	
+	
+	<bean id="eduqiDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/eduqi"/>
+    </bean>
+	
+</beans>
