@@ -26,7 +26,7 @@ public class EduqiCepRequestImpl implements EduqiCepRequest{
 	public EduqiCepRequestImpl(){}
 
 	@RequestMapping(value ="/getcep/{schoolID}", method = RequestMethod.GET,
-			headers="Accept=application/xml, application/json")
+			headers="Accept=application/json, application/xml")
 	public @ResponseBody CEP getCEP(@PathVariable String schoolID) {
 		CEP cep = new CEP();
 		if(schoolID != null){

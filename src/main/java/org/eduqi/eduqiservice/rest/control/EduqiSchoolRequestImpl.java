@@ -18,7 +18,7 @@ public class EduqiSchoolRequestImpl implements EduqiSchoolRequest{
 	private static final Logger LOG = Logger.getLogger(EduqiSchoolRequestImpl.class);
 	
 	@RequestMapping(value ="/generalstats", method = RequestMethod.GET,
-			headers="Accept=application/xml, application/json")
+			headers="Accept=application/json, application/xml")
 	public @ResponseBody AnswerResults getSGeneralStats() { 
 		LOG.info("Getting statistics");
 		AnswerResults result = new AnswerResults();
@@ -30,7 +30,7 @@ public class EduqiSchoolRequestImpl implements EduqiSchoolRequest{
 	}
 	
 	@RequestMapping(value ="/schoolanswers/{schoolID}", method = RequestMethod.GET,
-			headers="Accept=application/xml, application/json")
+			headers="Accept=application/json, application/xml")
 	public @ResponseBody Formanswers getSchoolAnswers(@PathVariable String schoolID){
 		int id = 0;
 		Formanswers result = new Formanswers();
