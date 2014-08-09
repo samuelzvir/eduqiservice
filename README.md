@@ -1,6 +1,6 @@
 Eduqi Service
 =============
----
+
 ##Sobre
 
 
@@ -23,11 +23,10 @@ https://github.com/dcardosods/eduqi
 
 
 
----
 
 ---
 ### Informações para utilizar o EduQI-Service
----
+--
 ### Versão 2.0.0
 
 ## Chamadas REST
@@ -58,14 +57,14 @@ https://github.com/dcardosods/eduqi
   * schoolID : ID da escola
 
 
- --- 
+ --
 ####Dependências da Aplicação (Versão 2.0):
 
 - Spring: http://spring.io/
 - Cleo: https://engineering.linkedin.com/cleo
 - Hibernate: http://hibernate.org/
   
----
+--
 ###      Versão 1.0.0 (Versão inicial)
 
 ####Servlets da Aplicação:
