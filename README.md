@@ -2,7 +2,7 @@ Eduqi Service
 =============
 ---
 ##Sobre
----
+
 
 O EduQI é um portal que tem por objetivo disponibilizar dados estatísticos referentes a infra-estrutura  das escolas 
 do brasil. O EduQI obtém dados da Prova Brasil e faz uma média das condições de infra-estrutura, segurança e recursos de auxilio 
@@ -13,7 +13,7 @@ EduQI Service é o serviço responsável por disponibilizar todos os dados para 
 Como é um serviço todos os dados utilizados na exibição podem ser consumidos por outros aplicativos através dos
 seguintes endereços:
 
----
+
 ### Acesse:
 ######Endereço na WEB: 
 http://eduqi.org
