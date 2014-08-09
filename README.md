@@ -25,7 +25,7 @@ https://github.com/dcardosods/eduqi
 
 
 ---
-### Informações para utilizar o EduQI-Service
+### Informações sobre as chamadas do EduQI-Service
 --
 ### Versão 2.0.0
 
