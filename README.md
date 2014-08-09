@@ -38,7 +38,7 @@ https://github.com/dcardosods/eduqi
 -  Chamada que retorna uma lista com os nomes e ids de escolas 
     
     ```sh
-        http://[host da aplicacao]:[porta]/eduqiservice/v1/eduqiservice/v1/schoolna me/{query}/{limit}
+    http://[host da aplicacao]:[porta]/eduqiservice/v1/eduqiservice/v1/schoolna me/{query}/{limit}
     ```
   * query : termos da pesquisa
   * limit : número máximo de escolas que estarão na na lista de retorno. (0 retorna todos os elementos da busca)
