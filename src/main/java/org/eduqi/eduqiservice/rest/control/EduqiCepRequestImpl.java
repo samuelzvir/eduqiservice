@@ -16,14 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class EduqiCepRequestImpl implements EduqiCepRequest{
 
 	private static final Logger LOG = Logger.getLogger(EduqiCepRequestImpl.class);
-	
 	@Autowired
 	private EduqiEscolaCEPService cepService; 
-	
-	public EduqiCepRequestImpl(EduqiEscolaCEPService cepService) {
-		this.cepService = cepService;
-	}
-	public EduqiCepRequestImpl(){}
 
 	@RequestMapping(value ="/getcep/{schoolID}", method = RequestMethod.GET,
 			headers="Accept=application/json, application/xml")

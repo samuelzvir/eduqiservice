@@ -8,5 +8,4 @@ public interface EduqiTypeaheadService {
 
 	List<SchoolName> searchSchoolName(String query);
 	void startTypeAhead() throws Exception ;
-	
 }

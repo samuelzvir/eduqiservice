@@ -7,14 +7,18 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.dao.DadosEscolaDAO;
-import org.eduqi.eduqiservice.core.dao.DadosEscolaDAOImpl;
 import org.eduqi.eduqiservice.core.domain.EduQIElement;
 import org.eduqi.eduqiservice.core.domain.SchoolName;
 import org.eduqi.eduqiservice.core.domain.SchoolNameList;
 import org.eduqi.eduqiservice.core.entity.DadosEscola;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
 
+	@Autowired
+	private DadosEscolaDAO resultadoEscolaDAO;
 	private static EduQIGenericTypeaheadInstance<EduQIElement> instance;
 	private static final Logger LOG = Logger.getLogger(EduqiTypeaheadServiceImpl.class);
 
@@ -30,7 +34,6 @@ public class EduqiTypeaheadServiceImpl implements EduqiTypeaheadService{
 		}
 
 		LOG.info("starting indexation ...");
-		DadosEscolaDAO resultadoEscolaDAO = new DadosEscolaDAOImpl();
 		List<DadosEscola> tempEscolaResult = resultadoEscolaDAO.listAll();
 
 		for (int i = 0 ;i < tempEscolaResult.size(); i++) {

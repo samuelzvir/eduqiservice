@@ -5,12 +5,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="result")
 public class AnswerResult {
 
+	private int id;
 	private String question;
 	private double bom;
 	private double regular;
 	private double ruim;
 	private double inexistente;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getQuestion() {
 		return question;
 	}

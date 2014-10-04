@@ -5,26 +5,30 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAO;
-import org.eduqi.eduqiservice.core.dao.DescricaoQuestionarioEscolaDAOImpl;
-import org.eduqi.eduqiservice.core.dao.QuestEscolaDAOImpl;
-import org.eduqi.eduqiservice.core.dao.ResultadoEscolaDAOImpl;
+import org.eduqi.eduqiservice.core.dao.QuestEscolaDAO;
 import org.eduqi.eduqiservice.core.domain.Form;
 import org.eduqi.eduqiservice.core.domain.Formanswers;
 import org.eduqi.eduqiservice.core.entity.DescricaoQuestionarioEscola;
 import org.eduqi.eduqiservice.core.entity.QuestEscola;
 import org.eduqi.eduqiservice.core.entity.ResultadoEscola;
 import org.eduqi.eduqiservice.core.util.EduqiQuestParser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 
-	private static final Logger LOG = Logger.getLogger(EduqiEscolaCEPServiceImpl.class);
-
-	public static Formanswers getSchoolAnswers(int id){
-		DescricaoQuestionarioEscolaDAO questDAO = new DescricaoQuestionarioEscolaDAOImpl();
-		QuestEscolaDAOImpl escolaDAO = new  QuestEscolaDAOImpl();
+	private static final Logger LOG = Logger.getLogger(EduqiSchoolServiceImpl.class);
+	@Autowired
+	private ResultadoEscolaService resultadoEscolaService;
+	@Autowired
+	private QuestEscolaDAO escolaDAO;
+	@Autowired
+	private DescricaoQuestionarioEscolaDAO questDAO;
+	
+	@Override
+	public Formanswers getSchoolAnswers(int id){
 		List<Form> answers = new ArrayList<Form>();
-
 		List<DescricaoQuestionarioEscola> descQuest = questDAO.listAll();	
 		QuestEscola questResult = escolaDAO.findById(id);
 
@@ -101,10 +105,10 @@ public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 		return null;
 	}
 
-	public static List<QuestEscola> buildStat(){
-		ResultadoEscolaDAOImpl escolaDAOImpl = new ResultadoEscolaDAOImpl();
-		List<ResultadoEscola> mt = escolaDAOImpl.getMilPrimeirosMat();
-		List<ResultadoEscola> lp = escolaDAOImpl.getMilPrimeirosLp();
+	@Override
+	public List<QuestEscola> buildStat(){	
+		List<ResultadoEscola> mt = resultadoEscolaService.getMilPrimeirosMat();
+		List<ResultadoEscola> lp = resultadoEscolaService.getMilPrimeirosLp();
 		List<Integer> idEscolas = new ArrayList<Integer>();
 
 		for (ResultadoEscola resultadoEscola : lp) {
@@ -113,10 +117,7 @@ public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 		for (ResultadoEscola resultM : mt) {
 			idEscolas.add(resultM.getIdEscola());
 		}
-
-		QuestEscolaDAOImpl escolaDAO = new  QuestEscolaDAOImpl();
 		List<QuestEscola> questEscola = new ArrayList<QuestEscola>();
-
 		for (Integer id : idEscolas) {
 			questEscola.add(escolaDAO.findById(id));
 		}
