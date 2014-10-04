@@ -8,8 +8,6 @@ public class SchoolName {
 	private int id;
 	private String name;
 	
-	
-	
 	public SchoolName(int id, String name) {
 		super();
 		this.id = id;

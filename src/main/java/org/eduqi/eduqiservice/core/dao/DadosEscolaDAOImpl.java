@@ -1,7 +1,6 @@
 package org.eduqi.eduqiservice.core.dao;
 
 import org.eduqi.eduqiservice.core.entity.DadosEscola;
-
-public class DadosEscolaDAOImpl extends HibernateGenericDAO<DadosEscola> implements DadosEscolaDAO {
-
-}
+import org.springframework.stereotype.Component;
+@Component
+public class DadosEscolaDAOImpl extends GenericDAOImpl<DadosEscola> implements DadosEscolaDAO {}

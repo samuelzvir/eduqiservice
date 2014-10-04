@@ -17,16 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class EduqiTypeaheadRequestImpl implements EduqiTypeaheadRequest {
 
 	private static final Logger LOG = LoggerFactory.getLogger(HomeController.class);
-
 	@Autowired
 	private EduqiTypeaheadServiceImpl eduqiTypeaheadService;
-
-	public EduqiTypeaheadRequestImpl(
-			EduqiTypeaheadServiceImpl eduqiTypeaheadService) {
-		super();
-		this.eduqiTypeaheadService = eduqiTypeaheadService;
-	}
-	public EduqiTypeaheadRequestImpl(){}
 
 	@RequestMapping(value ="/schoolname/{query}/{limit}", method = RequestMethod.GET,
 			headers="Accept=application/json,application/xml")

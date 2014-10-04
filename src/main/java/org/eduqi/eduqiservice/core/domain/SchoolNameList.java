@@ -8,8 +8,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class SchoolNameList {
 	
 	private List<SchoolName> schoolNames;
-
-	
 	
 	public SchoolNameList(List<SchoolName> schoolNames) {
 		super();

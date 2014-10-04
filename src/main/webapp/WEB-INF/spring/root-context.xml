@@ -2,32 +2,41 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	    
+    <bean id="sessionFactory"  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="packagesToScan"
+			value="org.eduqi.eduqiservice.core.entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory
+				</prop>
+				<prop key="hibernate.connection.release_mode">auto</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.connection.autocommit">true</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
 
-	<!-- Root Context: defines shared resources visible to all other web components -->
-
-	<bean id="eduqitypeaheadrequest" class="org.eduqi.eduqiservice.rest.control.EduqiTypeaheadRequestImpl" >
-		<constructor-arg ref="eduqitypeaheadservice" />
+				<!-- hibernate c3p0 settings -->
+				<prop key="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider
+				</prop>
+				<prop key="hibernate.c3p0.acquire_increment">3</prop>
+				<prop key="hibernate.c3p0.idle_test_period">10</prop>
+				<prop key="hibernate.c3p0.min_size">5</prop>
+				<prop key="hibernate.c3p0.max_size">75</prop>
+				<prop key="hibernate.c3p0.max_statements">10</prop>
+				<prop key="hibernate.c3p0.timeout">50</prop>
+				<prop key="hibernate.c3p0.preferredTestQuery">select 1</prop>
+				<prop key="hibernate.c3p0.testConnectionOnCheckout">true</prop>
+			</props>
+		</property>
 	</bean>
-	<bean id="eduqiceprequest" class="org.eduqi.eduqiservice.rest.control.EduqiCepRequestImpl">
-		<constructor-arg ref="eduqiescolacepservice" />
+		<!-- Database -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:/comp/env/jdbc/eduqi" />
 	</bean>
-	<bean id="eduqistatrequest"
-		class="org.eduqi.eduqiservice.rest.control.EduqiStatRequestImpl" />
-	<bean id="eduqischoolrequest"
-		class="org.eduqi.eduqiservice.rest.control.EduqiSchoolRequestImpl" />
-
-	<!-- Services -->
-	<bean id="eduqiescolacepservice"	class="org.eduqi.eduqiservice.core.service.EduqiEscolaCEPServiceImpl" />
-	
-	<bean id="eduqiinitservices" class="org.eduqi.eduqiservice.core.service.EduqiInitServices" init-method="startAll">
-		<constructor-arg ref="eduqitypeaheadservice" />
-		<constructor-arg ref="eduqiDataSource" />
-	</bean>
-	<bean id="eduqitypeaheadservice"  class="org.eduqi.eduqiservice.core.service.EduqiTypeaheadServiceImpl"/>
-	
-	
-	<bean id="eduqiDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-        <property name="jndiName" value="java:comp/env/jdbc/eduqi"/>
-    </bean>
 	
 </beans>

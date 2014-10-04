@@ -12,7 +12,7 @@
 		<bonecp-version>0.8.0.RELEASE</bonecp-version>
 		<hibernate-version>4.3.5.Final</hibernate-version>
 		<mysql.connector.version>5.1.18</mysql.connector.version>
-		<org.springframework-version>4.0.5.RELEASE</org.springframework-version>
+		<org.springframework-version>4.0.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
