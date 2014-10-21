@@ -107,8 +107,8 @@ public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 
 	@Override
 	public List<QuestEscola> buildStat(){	
-		List<ResultadoEscola> mt = resultadoEscolaService.getMilPrimeirosMat();
-		List<ResultadoEscola> lp = resultadoEscolaService.getMilPrimeirosLp();
+		List<ResultadoEscola> mt = resultadoEscolaService.getPrimeirosMat();
+		List<ResultadoEscola> lp = resultadoEscolaService.getPrimeirosLp();
 		List<Integer> idEscolas = new ArrayList<Integer>();
 
 		for (ResultadoEscola resultadoEscola : lp) {
