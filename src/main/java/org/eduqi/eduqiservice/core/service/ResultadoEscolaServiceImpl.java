@@ -45,5 +45,4 @@ public class ResultadoEscolaServiceImpl implements ResultadoEscolaService{
 		int v = Integer.parseInt(n);
 		return 	resultadoEscolaDAO.listByRangeColumnAsc(v, "mediaLp");
 	}
-
 }

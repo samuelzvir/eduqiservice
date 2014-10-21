@@ -25,7 +25,7 @@ public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 	private QuestEscolaDAO escolaDAO;
 	@Autowired
 	private DescricaoQuestionarioEscolaDAO questDAO;
-	
+
 	@Override
 	public Formanswers getSchoolAnswers(int id){
 		List<Form> answers = new ArrayList<Form>();
@@ -95,7 +95,7 @@ public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 			answers.add(new Form("64", descQuest.get(57).getDescricaoPergunta(), EduqiQuestParser.matchString(questResult.getTxRespQ064())));
 			answers.add(new Form("65", descQuest.get(58).getDescricaoPergunta(), EduqiQuestParser.matchString(questResult.getTxRespQ065())));
 			answers.add(new Form("66", descQuest.get(58).getDescricaoPergunta(), EduqiQuestParser.matchString(questResult.getTxRespQ066())));	
-			
+
 			LOG.debug("Info added. ");
 			return new Formanswers(answers);
 		}
@@ -117,6 +117,7 @@ public class EduqiSchoolServiceImpl implements EduqiSchoolService{
 		for (ResultadoEscola resultM : mt) {
 			idEscolas.add(resultM.getIdEscola());
 		}
+		
 		List<QuestEscola> questEscola = new ArrayList<QuestEscola>();
 		for (Integer id : idEscolas) {
 			questEscola.add(escolaDAO.findById(id));
