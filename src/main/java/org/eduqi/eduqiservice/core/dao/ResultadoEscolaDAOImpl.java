@@ -1,7 +1,7 @@
 package org.eduqi.eduqiservice.core.dao;
 
 import org.eduqi.eduqiservice.core.entity.ResultadoEscola;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class ResultadoEscolaDAOImpl extends GenericDAOImpl<ResultadoEscola> implements ResultadoEscolaDAO {}

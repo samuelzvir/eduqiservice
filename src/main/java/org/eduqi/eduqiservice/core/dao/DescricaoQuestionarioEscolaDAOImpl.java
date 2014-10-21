@@ -1,7 +1,7 @@
 package org.eduqi.eduqiservice.core.dao;
 
 import org.eduqi.eduqiservice.core.entity.DescricaoQuestionarioEscola;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class DescricaoQuestionarioEscolaDAOImpl extends GenericDAOImpl<DescricaoQuestionarioEscola> implements DescricaoQuestionarioEscolaDAO{}

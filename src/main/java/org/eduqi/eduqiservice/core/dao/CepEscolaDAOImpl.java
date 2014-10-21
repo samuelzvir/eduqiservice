@@ -1,7 +1,7 @@
 package org.eduqi.eduqiservice.core.dao;
 
 import org.eduqi.eduqiservice.core.entity.CepEscola;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class CepEscolaDAOImpl extends GenericDAOImpl<CepEscola> implements CepEscolaDAO,GenericDAO<CepEscola> {}

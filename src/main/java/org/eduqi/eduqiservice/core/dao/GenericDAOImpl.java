@@ -23,9 +23,9 @@ import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.engine.transaction.spi.LocalStatus;
 import org.springframework.core.GenericTypeResolver;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component 
+@Repository
 @SuppressWarnings("unchecked")
 public abstract class GenericDAOImpl<T> implements GenericDAO<T> {
 
