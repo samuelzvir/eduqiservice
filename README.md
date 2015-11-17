@@ -23,7 +23,7 @@ https://github.com/dcardosods/eduqi
 
 ### Como contribuir
 
-- Use o [EduQI](http://eduqi.org)!
+- Use o [EduQI](http://dcardosods.github.io/eduqi/)!
 - Sugira melhorias, reporte bugs, envie críticas em [EduQI Service/Issues](https://github.com/samuelyuri/eduqiservice/issues) ou [EduQI/Issues](https://github.com/dcardosods/eduqi/issues)
 - Faça um fork, corrija bugs, implemente novas funcionalidades...
 
