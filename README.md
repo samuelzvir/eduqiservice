@@ -16,7 +16,7 @@ seguintes endereços:
 
 ### Acesse:
 ######Endereço na WEB: 
-http://eduqi.org
+http://dcardosods.github.io/eduqi/
 
 ######Repositório do Front-end: 
 https://github.com/dcardosods/eduqi
